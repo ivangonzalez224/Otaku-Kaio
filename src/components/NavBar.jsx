@@ -8,7 +8,7 @@ const NavBar = () => (
           <NavLink to="/"><img src='' alt="Logo" /></NavLink>
         </li>
       </ul>
-      <ul>
+      <ul className="nav_center">
         <li id="nav_options">
           <NavLink to="/">Home</NavLink>
         </li>
