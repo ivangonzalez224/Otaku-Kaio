@@ -1,12 +1,13 @@
 nav {
   width: 100%;
+  padding: 0 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: 700;
-  color: #fff;
-  height: 48px;
-  background-color: var(--backColor);
+  color: #7a7a7a;
+  height: 54px;
+  background-color: #fff;
   box-sizing: border-box;
   position: sticky;
   top: 0;
@@ -14,9 +15,54 @@ nav {
 }
 
 .nav_center {
+  width: 40%;
+  color: #7a7a7a;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #eff2f9;
+  padding: 0.5%;
+  border-radius: 15px;
 }
 
 nav ul li {
   list-style: none;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  color: #7a7a7a;
+  text-decoration: none;
+}
+
+#nav-rigth {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#nav-rigth li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  border-radius: 50px;
+  border: #7a7a7a solid 1px;
+  padding: 4% 8%;
+}
+
+.nav-homeOpt {
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 0.5% 2%;
+}
+
+.nav-homeOpt a {
+  font-weight: 700;
+}
+
+#nav-userIcon {
+  background-color: #fdd776;
 }

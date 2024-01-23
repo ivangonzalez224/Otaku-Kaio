@@ -1,5 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import { FaRegHeart } from "react-icons/fa6";
+import { IoCartOutline } from "react-icons/io5";
+import { FaRegUser } from "react-icons/fa";
+import '../assets/styles/NavBar.css';
 
 const NavBar = () => (
     <nav>
@@ -9,7 +12,7 @@ const NavBar = () => (
         </li>
       </ul>
       <ul className="nav_center">
-        <li id="nav_options">
+        <li id="nav_options" className="nav-homeOpt">
           <NavLink to="/">Home</NavLink>
         </li>
         <li id="nav_options">
@@ -24,13 +27,13 @@ const NavBar = () => (
       </ul>
       <ul id="nav-rigth">
         <li>
-          <FaRegHeart id="heart-btn" />
+          <NavLink ><FaRegHeart id="heart-btn" /></NavLink>
         </li>
         <li>
-          <NavLink to="/cart"> </NavLink>
+          <NavLink to="/cart"><IoCartOutline /></NavLink>
         </li>
-        <li>
-          <NavLink to="/profile"> </NavLink>
+        <li id="nav-userIcon">
+          <NavLink to="/profile"><FaRegUser /></NavLink>
         </li>
       </ul>
     </nav>
