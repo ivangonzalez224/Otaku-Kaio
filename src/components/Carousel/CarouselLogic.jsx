@@ -3,7 +3,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 const CarouselLogic = () => {
-    const carouselItems = [{id:1, image: 'image1.png'}, {id:2, image: 'image2.png'}, {id:3, image: 'image3.png'}];
+    const carouselItems = [{id:1, image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1706235080/devSources/Discurso_de_ventas_para_Deliexpre%CC%81s_m2eull.png'}, {id:2, image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1706235080/devSources/Discurso_de_ventas_para_Deliexpre%CC%81s_m2eull.png'}];
     const responsive = {
         superLargeDesktop: {
           breakpoint: { max: 4000, min: 0 },
