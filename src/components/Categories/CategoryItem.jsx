@@ -1,12 +1,12 @@
 const CategoryItem = () => {
-  const categotiList = [{id:1, image:'', title:''}, {id:2, image:'', title:''}, {id:3, image:'', title:''}]  
+  const categoryList = [{id:1, image:'', title:''}, {id:2, image:'', title:''}, {id:3, image:'', title:''}]  
   return (
     <div className="category-item">
         <img
-        src= {itemImage}
+        src= ""
         alt= "Offert"
         />
-        <span>Mangas</span>
+        <span>Animes</span>
     </div>
     );
   }
