@@ -1,23 +1,24 @@
 import PropTypes from 'prop-types';
 import ArrivalItem from './ArrivalItem';
 
-const ArrivalList = ({ arrivalOptions }) => {
-  return (
-    <div>
+const ArrivalList = ({ arrivalOptions }) => (
+    <div className="arrivalMainDiv w-55 border border-blue-500">
       <h2 className="text-lg text-left font-bold text-111 mb-4 ml-44">Latest Arrivals</h2>
-      <div className="category_listContainer bg-f1f1f1 w-85 flex justify-center py-4"> 
-        {arrivalOptions.map(arrival => (
+      <div className="arrival_listContainer bg-a1a1a1 grid grid-cols-3 gap-4 py-4">
+        {arrivalOptions.map((arrival) => (
           <ArrivalItem
             key={arrival.id}
             description={arrival.description}
+            image={arrival.image}
+            className="arrivalItem mr-4 mb-4"
           />
         ))}
       </div>
     </div>
   );
-};
 
 ArrivalList.propTypes = {
-    arrivalOptions: PropTypes.array.isRequired,
-  };
+  arrivalOptions: PropTypes.array.isRequired,
+};
+
 export default ArrivalList;
