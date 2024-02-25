@@ -18,7 +18,7 @@ const NavBar = () => (
         <NavLink to="/">About</NavLink>
       </li>
       <li className="px-4 py-2">
-        <NavLink to="/">Store</NavLink>
+        <NavLink to="/store">Store</NavLink>
       </li>
       <li className="px-4 py-2">
         <NavLink to="/">Offerts</NavLink>
