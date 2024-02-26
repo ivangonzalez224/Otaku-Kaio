@@ -4,7 +4,7 @@ const ProductsList = ({ products, addToCart }) => {
     return (
       <div className="lista-productos">
         {products.map((product) => (
-          <ProductItem key={product.id} producto={product} addToCart={addToCart} />
+          <ProductItem key={product.id} product={product} addToCart={addToCart} />
         ))}
       </div>
     );
