@@ -11,7 +11,7 @@ const ArrivalLogic = () => {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center w-full border border-red-500">
+    <div className="flex flex-col justify-center items-center w-85 ">
       <ArrivalList arrivalOptions={arrivalOptions} />
     </div>
   );
