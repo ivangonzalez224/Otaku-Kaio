@@ -1,17 +1,15 @@
 import PropTypes from 'prop-types';
 
-const CarouselItem = (itemImage, itemId ) => (
-  <div className="carousel-item">
-    <img
-      src= {itemImage}
-      alt= "Offert"
-    />
-  </div>
+const CarouselItem = (itemImage ) => (
+  <img
+    src= {itemImage}
+    alt= "Offert"
+    className="h-full w-full object-cover"
+  /> 
 );
 
 CarouselItem.propTypes = {
   itemImage: PropTypes.string.isRequired,
-  itemId: PropTypes.number.isRequired,
 };
 
 export default CarouselItem;
