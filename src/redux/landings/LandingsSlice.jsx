@@ -1,12 +1,12 @@
 import axios from 'axios';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-export const getAnimes = createAsyncThunk(
-  'Animes/getAnimes',
+export const getLandings = createAsyncThunk(
+  'landings/getLandings',
   async (arg, { rejectWithValue }) => {
     try {
       const response = await axios.get(
-        ' ',
+        'http://127.0.0.1:3000/api/v1/landings',
       );
       const endData = response.data.data;
       return endData;
@@ -16,20 +16,20 @@ export const getAnimes = createAsyncThunk(
   },
 );
 const initialState = {
-  animeItems: [],
+  landingItems: [],
   error: '',
 };
-const animesSlice = createSlice({
-  name: 'anime',
+const landingsSlice = createSlice({
+  name: 'landing',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(getAnimes.fulfilled, (state, action) => {
-      state.animeItems = action.payload;
+    builder.addCase(getLandings.fulfilled, (state, action) => {
+      state.landingItems = action.payload;
     });
-    builder.addCase(getAnimes.rejected, (state, action) => {
+    builder.addCase(getLandings.rejected, (state, action) => {
       state.error = action.payload;
     });
   },
 });
-export default animesSlice.reducer;
+export default landingsSlice.reducer;

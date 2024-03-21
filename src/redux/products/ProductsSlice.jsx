@@ -2,7 +2,7 @@ import axios from 'axios';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const getProducts = createAsyncThunk(
-  'products/getproducts',
+  'products/getProducts',
   async (arg, { rejectWithValue }) => {
     try {
       const response = await axios.get(
