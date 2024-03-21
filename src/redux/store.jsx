@@ -4,7 +4,7 @@ import productsReducer from './products/ProductsSlice';
 
 const store = configureStore({
   reducer: {
-    animes: animesReducer,
+    landings: landingsReducer,
     products: productsReducer,
   },
 });
