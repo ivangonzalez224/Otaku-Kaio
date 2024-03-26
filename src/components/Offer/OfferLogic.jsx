@@ -1,8 +1,17 @@
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getLandings } from '../../redux/landings/LandingsSlice';
+
 const OfferLogic = () => {
-    const offerOptions = [
-      { id: 1, title: 'Animes', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1709161390/devSources/animeOffer_gvt5go.png', discount: 35 },
-      { id: 2, title: 'T-Shirts', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1707238370/devSources/veg_good_category_suwi8n.png', discount: 25 },
-    ];
+  const dispatch = useDispatch();
+  const { landingItems } = useSelector((state) => state.landings);
+  
+  useEffect(() => {
+    if (landingItems.length === 0) {
+      dispatch(getLandings());  
+    }
+  });
+  const offerOptions = landingItems.filter(cat => cat.category === 'offer');
   
     return (
       <div className="mainContainer flex justify-center items-center mt-16 mb-16">
@@ -19,7 +28,7 @@ const OfferLogic = () => {
               <div className="offerItemTop w-full flex justify-between items-center px-4 py-2 mb-2">
                 <h3 className="text-xl font-bold inline-block mr-2">{option.title}</h3>
                 <span className="text-gray-600 bg-white rounded-full py-1 px-2 flex flex-col items-center text-center">
-                  <span className="text-base font-bold">{option.discount}%</span>
+                  <span className="text-base font-bold">{Math.floor(option.offer)}%</span>
                   <span className="text-xs">OFF</span>
                 </span>
               </div>
