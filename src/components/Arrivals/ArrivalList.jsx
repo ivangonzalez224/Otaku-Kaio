@@ -8,7 +8,7 @@ const ArrivalList = ({ arrivalOptions }) => (
         {arrivalOptions.map((arrival) => (
           <ArrivalItem
             key={arrival.id}
-            description={arrival.description}
+            description={arrival.name}
             image={arrival.image}
             className="arrivalItem mr-4 mb-4"
           />
