@@ -1,21 +1,32 @@
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getLandings } from '../../redux/landings/LandingsSlice';
 import CarouselItem from './CarouselItem';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 const CarouselLogic = () => {
-    const carouselItems = [{id:1, name: 'Anime offer', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1709336758/devSources/carouselAnime1_syz7dy.png'}];
+  const dispatch = useDispatch();
+  const { landingItems } = useSelector((state) => state.landings);
+  
+  useEffect(() => {
+    if (landingItems.length === 0) {
+      dispatch(getLandings());  
+    }
+  });
+    const carouselItems = landingItems.filter(item => item.category === 'carousel');
     const responsive = {
       superLargeDesktop: {
         breakpoint: { max: 4000, min: 3000 },
-        items: 5,
+        items: 1,
       },
       desktop: {
         breakpoint: { max: 3000, min: 992 },
-        items: 3,
+        items: 1,
       },
       tablet: {
         breakpoint: { max: 992, min: 765 },
-        items: 2,
+        items: 1,
       },
       mobile: {
         breakpoint: { max: 765, min: 0 },
