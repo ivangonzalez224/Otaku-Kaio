@@ -11,7 +11,7 @@ const CategoryList = ({ catOptions }) => {
             key={category.id}
             name={category.name}
             image={category.image}
-            itemCount={category.itemCount}
+            itemCount={category.offer}
           />
         ))}
       </div>

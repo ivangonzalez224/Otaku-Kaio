@@ -20,7 +20,7 @@ const initialState = {
   error: '',
 };
 const productsSlice = createSlice({
-  name: 'product',
+  name: 'products',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
