@@ -4,6 +4,7 @@ import { getLandings } from '../../redux/landings/LandingsSlice';
 import CarouselItem from './CarouselItem';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import '../../assets/styles/carousel.css';
 
 const CarouselLogic = () => {
   const dispatch = useDispatch();
@@ -34,14 +35,16 @@ const CarouselLogic = () => {
       },
     };
     return (
-      <Carousel responsive={responsive}>
-        {carouselItems.map((item) => (
-          <CarouselItem
-            key={item.id}
-            itemImage={item.image} 
-            itemName={item.name}/>
-        ))}
-      </Carousel>
+      <div className="carousel-main">
+        <Carousel responsive={responsive}>
+          {carouselItems.map((item) => (
+            <CarouselItem
+              key={item.id}
+              itemImage={item.image} 
+              itemName={item.name}/>
+          ))}
+        </Carousel>
+      </div>  
     );
   };
 

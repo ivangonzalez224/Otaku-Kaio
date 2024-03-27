@@ -15,6 +15,6 @@ const CategoryItem = ({ name, image, itemCount }) => {
   CategoryItem.propTypes = {
     name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
-    itemCount: PropTypes.number.isRequired,
+    itemCount: PropTypes.string.isRequired,
   };
   export default CategoryItem;
