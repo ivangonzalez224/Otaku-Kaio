@@ -25,7 +25,7 @@ const OfferLogic = () => {
           </div>
           {offerOptions.map((option, index) => (
             <div key={option.id} className={`offerImagesDiv col-span-1 w-80 mx-auto rounded-lg overflow-hidden flex flex-col items-center justify-center ${index === 0 ? 'bg-blue-100' : 'bg-yellow-100'}`}>
-              <div className="offerItemTop w-full flex justify-between items-center px-4 py-2 mb-2">
+              <div className="offerItemTop w-full flex justify-between items-center px-4 pt-2 mb-0">
                 <h3 className="text-xl font-bold inline-block mr-2">{option.title}</h3>
                 <span className="text-gray-600 bg-white rounded-full py-1 px-2 flex flex-col items-center text-center">
                   <span className="text-base font-bold">{Math.floor(option.offer)}%</span>
@@ -35,7 +35,7 @@ const OfferLogic = () => {
               <img
                 src={option.image}
                 alt="Background image"
-                className="offerPic w-40 aspect-ratio-square object-cover"
+                className="offerPic w-40 mb-4 aspect-ratio-square object-cover"
               />
             </div>
           ))}
