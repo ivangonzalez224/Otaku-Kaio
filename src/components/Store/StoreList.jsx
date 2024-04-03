@@ -1,54 +1,56 @@
+import PropTypes from 'prop-types';
 import React, { useState } from 'react';
+import StoreItem from './StoreItem';
 
 const StoreList = ({ products }) => {
-  const [selectedCategory, setSelectedCategory] = useState('clothes'); // Initial selected category
+  const [selectedCategory, setSelectedCategory] = useState('Clothes'); // Initial selected category
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
   };
 
-  const filteredProducts = products.filter((product) => product.cat === selectedCategory);
+  const filteredProducts = products.filter((product) => product.category === selectedCategory);
 
   return (
     <div>
       <div className="flex justify-center mb-4">
         <button
           className={`bg-blue-500 text-white font-bold py-2 px-4 rounded-md mr-2 ${
-            selectedCategory === 'clothes' ? 'bg-white border border-blue-500' : ''
+            selectedCategory === 'Clothes' ? 'bg-white border border-blue-500' : ''
           }`}
-          onClick={() => handleCategoryClick('clothes')}
+          onClick={() => handleCategoryClick('Clothes')}
         >
           Clothes
         </button>
         <button
           className={`bg-blue-500 text-white font-bold py-2 px-4 rounded-md mr-2 ${
-            selectedCategory === 'animes' ? 'bg-white border border-blue-500' : ''
+            selectedCategory === 'Animes' ? 'bg-white border border-blue-500' : ''
           }`}
-          onClick={() => handleCategoryClick('animes')}
+          onClick={() => handleCategoryClick('Animes')}
         >
           Animes
         </button>
         <button
           className={`bg-blue-500 text-white font-bold py-2 px-4 rounded-md mr-2 ${
-            selectedCategory === 'cups' ? 'bg-white border border-blue-500' : ''
+            selectedCategory === 'Cups' ? 'bg-white border border-blue-500' : ''
           }`}
-          onClick={() => handleCategoryClick('cups')}
+          onClick={() => handleCategoryClick('Cups')}
         >
           Cups
         </button>
         <button
           className={`bg-blue-500 text-white font-bold py-2 px-4 rounded-md mr-2 ${
-            selectedCategory === 'games' ? 'bg-white border border-blue-500' : ''
+            selectedCategory === 'Games' ? 'bg-white border border-blue-500' : ''
           }`}
-          onClick={() => handleCategoryClick('games')}
+          onClick={() => handleCategoryClick('Games')}
         >
           Games
         </button>
         <button
           className={`bg-blue-500 text-white font-bold py-2 px-4 rounded-md ${
-            selectedCategory === 'dolls' ? 'bg-white border border-blue-500' : ''
+            selectedCategory === 'Doll' ? 'bg-white border border-blue-500' : ''
           }`}
-          onClick={() => handleCategoryClick('dolls')}
+          onClick={() => handleCategoryClick('Doll')}
         >
           Dolls
         </button>
@@ -56,18 +58,20 @@ const StoreList = ({ products }) => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {filteredProducts.map((product) => (
           <StoreItem
-            key={product.id} // Replace with unique identifier for each product
+            key={product.id}
             image={product.image}
             name={product.name}
-            originalPrice={product.originalPrice}
-            salePrice={product.salePrice}
-            onDetailsClick={() => /* Handle details click */}
-            onCartClick={() => /* Handle cart click */}
+            originalPrice={product.ori_price}
+            salePrice={product.sale_price}
           />
         ))}
       </div>
     </div>
   );
+};
+
+StoreList.propTypes = {
+  products: PropTypes.array.isRequired,
 };
 
 export default StoreList;

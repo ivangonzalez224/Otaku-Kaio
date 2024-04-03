@@ -8,7 +8,7 @@ export const getProducts = createAsyncThunk(
       const response = await axios.get(
         'http://127.0.0.1:3000/api/v1/products',
       );
-      const endData = response.data.data;
+      const endData = response.data;
       return endData;
     } catch (error) {
       return rejectWithValue(error.message);

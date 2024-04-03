@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
-const StoreItem = ({ image, name, originalPrice, salePrice, onDetailsClick, onCartClick }) => {
+const StoreItem = ({ image, name, originalPrice, salePrice }) => {
   return (
     <div className="rounded-lg bg-white border border-blue-500 p-4">
       <img src={image} alt={name} className="mx-auto" />
@@ -12,13 +13,13 @@ const StoreItem = ({ image, name, originalPrice, salePrice, onDetailsClick, onCa
       <div className="flex justify-center items-center mt-4">
         <button
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md"
-          onClick={onDetailsClick}
+          // onClick={onDetailsClick}
         >
           Details
         </button>
         <button
           className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-md ml-4"
-          onClick={onCartClick}
+          // onClick={onCartClick}
         >
           <svg className="fill-current h-6 w-6" viewBox="0 0 24 24">
             <path d="M7 18c-1.1 0-2-.9-2-2s1-2 2-2 2 .9 2 2-1 2-2 2zM18 1.l-8 5-8-5v14.h16l-8-5zM12 8c-1.1 0-2-.9-2-2s1-2 2-2 2 .9 2 2-1 2-2 2z" />
@@ -29,4 +30,10 @@ const StoreItem = ({ image, name, originalPrice, salePrice, onDetailsClick, onCa
   );
 };
 
+StoreItem.propTypes = {
+    image: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    originalPrice: PropTypes.string.isRequired,
+    salePrice: PropTypes.string.isRequired,
+  };
 export default StoreItem;
