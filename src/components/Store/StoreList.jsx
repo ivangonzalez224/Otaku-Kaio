@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import StoreItem from './StoreItem';
+import '../../App.css';
 
 const StoreList = ({ products }) => {
-  const [selectedCategory, setSelectedCategory] = useState('Clothes'); // Initial selected category
+  const [selectedCategory, setSelectedCategory] = useState('Clothes');
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
@@ -15,40 +16,40 @@ const StoreList = ({ products }) => {
     <div>
       <div className="flex justify-center mb-4">
         <button
-          className={`bg-blue-500 text-white font-bold py-2 px-4 rounded-md mr-2 ${
-            selectedCategory === 'Clothes' ? 'bg-white border border-blue-500' : ''
+          className={`bg-white-500 text-[15px] text-blue py-1 px-3 rounded-md mr-2 ${
+            selectedCategory === 'Clothes' ? 'bg-blue-500 text-white' : ''
           }`}
           onClick={() => handleCategoryClick('Clothes')}
         >
           Clothes
         </button>
         <button
-          className={`bg-blue-500 text-white font-bold py-2 px-4 rounded-md mr-2 ${
-            selectedCategory === 'Animes' ? 'bg-white border border-blue-500' : ''
+          className={`bg-white-500 text-[15px] text-blue py-1 px-3 rounded-md mr-2 ${
+            selectedCategory === 'Animes' ? 'bg-blue-500 text-white' : ''
           }`}
           onClick={() => handleCategoryClick('Animes')}
         >
           Animes
         </button>
         <button
-          className={`bg-blue-500 text-white font-bold py-2 px-4 rounded-md mr-2 ${
-            selectedCategory === 'Cups' ? 'bg-white border border-blue-500' : ''
+          className={`bg-white-500 text-[15px] text-blue py-1 px-3 rounded-md mr-2 ${
+            selectedCategory === 'Cups' ? 'bg-blue-500 text-white' : ''
           }`}
           onClick={() => handleCategoryClick('Cups')}
         >
           Cups
         </button>
         <button
-          className={`bg-blue-500 text-white font-bold py-2 px-4 rounded-md mr-2 ${
-            selectedCategory === 'Games' ? 'bg-white border border-blue-500' : ''
+          className={`bg-white-500 text-[15px] text-blue py-1 px-3 rounded-md mr-2 ${
+            selectedCategory === 'Games' ? 'bg-blue-500 text-white' : ''
           }`}
           onClick={() => handleCategoryClick('Games')}
         >
           Games
         </button>
         <button
-          className={`bg-blue-500 text-white font-bold py-2 px-4 rounded-md ${
-            selectedCategory === 'Doll' ? 'bg-white border border-blue-500' : ''
+          className={`bg-white-500 text-[15px] text-blue py-1 px-3 rounded-md mr-2 ${
+            selectedCategory === 'Doll' ? 'bg-blue-500 text-white' : ''
           }`}
           onClick={() => handleCategoryClick('Doll')}
         >

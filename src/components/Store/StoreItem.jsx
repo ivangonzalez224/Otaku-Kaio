@@ -22,7 +22,6 @@ const StoreItem = ({ image, name, originalPrice, salePrice }) => {
           // onClick={onCartClick}
         >
           <svg className="fill-current h-6 w-6" viewBox="0 0 24 24">
-            <path d="M7 18c-1.1 0-2-.9-2-2s1-2 2-2 2 .9 2 2-1 2-2 2zM18 1.l-8 5-8-5v14.h16l-8-5zM12 8c-1.1 0-2-.9-2-2s1-2 2-2 2 .9 2 2-1 2-2 2z" />
           </svg>
         </button>
       </div>
