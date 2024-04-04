@@ -14,9 +14,9 @@ const StoreList = ({ products }) => {
 
   return (
     <div>
-      <div className="flex justify-center mb-4">
+      <div className="flex justify-start mb-6">
         <button
-          className={`bg-white-500 text-[15px] text-blue py-1 px-3 rounded-md mr-2 ${
+          className={`bg-white-500 text-[15px] text-blue border border-blue-500 py-1 px-3 rounded-md focus:outline-none mr-4 ${
             selectedCategory === 'Clothes' ? 'bg-blue-500 text-white' : ''
           }`}
           onClick={() => handleCategoryClick('Clothes')}
@@ -24,7 +24,7 @@ const StoreList = ({ products }) => {
           Clothes
         </button>
         <button
-          className={`bg-white-500 text-[15px] text-blue py-1 px-3 rounded-md mr-2 ${
+          className={`bg-white-500 text-[15px] text-blue border border-blue-500 focus:outline-none py-1 px-3 rounded-md mr-4 ${
             selectedCategory === 'Animes' ? 'bg-blue-500 text-white' : ''
           }`}
           onClick={() => handleCategoryClick('Animes')}
@@ -32,7 +32,7 @@ const StoreList = ({ products }) => {
           Animes
         </button>
         <button
-          className={`bg-white-500 text-[15px] text-blue py-1 px-3 rounded-md mr-2 ${
+          className={`bg-white-500 text-[15px] text-blue border border-blue-500 focus:outline-none py-1 px-3 rounded-md mr-4 ${
             selectedCategory === 'Cups' ? 'bg-blue-500 text-white' : ''
           }`}
           onClick={() => handleCategoryClick('Cups')}
@@ -40,7 +40,7 @@ const StoreList = ({ products }) => {
           Cups
         </button>
         <button
-          className={`bg-white-500 text-[15px] text-blue py-1 px-3 rounded-md mr-2 ${
+          className={`bg-white-500 text-[15px] text-blue border border-blue-500 focus:outline-none py-1 px-3 rounded-md mr-4 ${
             selectedCategory === 'Games' ? 'bg-blue-500 text-white' : ''
           }`}
           onClick={() => handleCategoryClick('Games')}
@@ -48,7 +48,7 @@ const StoreList = ({ products }) => {
           Games
         </button>
         <button
-          className={`bg-white-500 text-[15px] text-blue py-1 px-3 rounded-md mr-2 ${
+          className={`bg-white-500 text-[15px] text-blue border border-blue-500 focus:outline-none py-1 px-3 rounded-md ${
             selectedCategory === 'Doll' ? 'bg-blue-500 text-white' : ''
           }`}
           onClick={() => handleCategoryClick('Doll')}

@@ -1,8 +1,8 @@
 const FooterLogic = () => {
     return (
-      <footer className="bg-white border-t border-gray-200 py-8">
+      <footer className="w-full bg-white border-t border-gray-200 py-8 mt-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 flex flex-col items-center">
               <img
                 src="logo.png"
@@ -15,7 +15,7 @@ const FooterLogic = () => {
               >
                 Contact Us
               </a>
-           </div>
+            </div>
             <div className="col-span-1 mt-4 md:mt-0">
               <h3 className="mb-2 text-sm font-bold text-gray-700 text-left">Navigation</h3>
               <ul className="list-unstyled text-left">
@@ -63,7 +63,7 @@ const FooterLogic = () => {
             </div>
           </div>
         </div>
-        <div className="text-center mt-4 text-sm text-gray-500">
+        <div className="text-center mt-10 text-sm text-gray-500">
           Copyright © 2024 Otaku Kaio. All rights reserved.
         </div>
       </footer>

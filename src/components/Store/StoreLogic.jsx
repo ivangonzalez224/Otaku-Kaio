@@ -12,7 +12,7 @@ const StoreLogic = () => {
     }
   });
   return (
-    <div className="store_logic">
+    <div className="store_logic flex flex-col justify-center items-center mt-8 w-full md:w-[73%]">
       <StoreList products={productItems}/>
     </div>
   );

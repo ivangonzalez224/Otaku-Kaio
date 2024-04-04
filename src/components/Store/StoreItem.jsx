@@ -3,14 +3,14 @@ import React from 'react';
 
 const StoreItem = ({ image, name, originalPrice, salePrice }) => {
   return (
-    <div className="rounded-lg bg-white border border-blue-500 p-4">
+    <div className="flex flex-col justify-end rounded-lg bg-white border border-blue-500 p-2">
       <img src={image} alt={name} className="mx-auto" />
       <h3 className="font-bold text-left mb-2">{name}</h3>
       <div className="flex justify-between text-sm">
-        <span className="text-gray-500 line-through">{originalPrice}</span>
-        <span className="text-red-500 font-bold">{salePrice}</span>
+        <span className="text-gray-500 line-through">$ {originalPrice}</span>
+        <span className="text-red-500 font-bold">$ {salePrice}</span>
       </div>
-      <div className="flex justify-center items-center mt-4">
+      <div className="flex justify-between items-center mt-4">
         <button
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md"
           // onClick={onDetailsClick}
