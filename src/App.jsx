@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './components/pages/Home';
 import Products from './components/pages/Products';
+import Details from './components/pages/Details';
 import NavBar from './components/NavBar';
 import store from './redux/store'
 import './App.css';
@@ -15,7 +16,7 @@ const App = () => (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/store" element={<Products />} />
-      <Route path="/store/details/:productId" element={<Details />}
+      <Route path="/store/details/:productId" element={<Details />} />
     </Routes>
   </div>
 

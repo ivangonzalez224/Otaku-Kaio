@@ -60,6 +60,7 @@ const StoreList = ({ products }) => {
         {filteredProducts.map((product) => (
           <StoreItem
             key={product.id}
+            productid={product.id}
             image={product.image}
             name={product.name}
             originalPrice={product.ori_price}

@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import DetailsItem from './DetailsItem';
 import { TbShoppingCartFilled } from "react-icons/tb";
 
-const StoreItem = ({ image, name, originalPrice, salePrice }) => {
+const StoreItem = ({ productid, image, name, originalPrice, salePrice }) => {
   const navigate = useNavigate();
   const [showDetails, setShowDetails] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -24,7 +23,7 @@ const StoreItem = ({ image, name, originalPrice, salePrice }) => {
       <div className="flex justify-between items-center mt-4">
         <button
           className="bg-blue-500 hover:bg-blue-700 text-[15px] focus:outline-none text-white  py-2 px-4 rounded-md"
-          onClick={() => navigate(`/store/details/${product.id}`)}
+          onClick={() => navigate(`/store/details/${productid}`)}
         >
           Details
         </button>
