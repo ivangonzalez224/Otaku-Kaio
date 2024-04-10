@@ -11,11 +11,15 @@ const DetailsItem = ({ product }) => {
   return (
     <div className="flex flex-col items-center justify-center w-100vw bg-gray mx-auto py-2">
       <div className="bg-white rounded-lg shadow-md w-100">
-        <button className="absolute top-2 right-2 focus:outline-none text-white hover:bg-red-500 bg-red-700 rounded-full px-2 py-1" onClick={() => window.history.back()}>
-          <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7 7-7v14z" />
-          </svg>
-        </button>
+        <div className="flex items-center pl-2 pt-2"> 
+          <button className="text-gray-500 bg-white hover:underline focus:outline-none" onClick={() => window.history.back()}>
+            Store 
+          </button>
+          <span className="text-gray-500 mx-1">&gt;</span>
+          <span className="text-gray-500 underline">
+            {product[0].category}
+          </span>
+        </div>
         <div className="flex flex-col p-4">
           <div className="flex items-center mb-4">
             <img src={product[0].image} alt={product.name} className="w-80 object-cover rounded-lg mr-8" />
