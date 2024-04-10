@@ -8,6 +8,21 @@ const DetailsItem = ({ product }) => {
     setSelectedSize(size);
   };
 
+  const showSizeButtons =
+    product[0].category === 'Cups' ||
+    product[0].category === 'Clothes' ||
+    product[0].category === 'Doll';
+
+  const allowedSizes =
+    product[0].category === 'Cups' || product[0].category === 'Doll'
+      ? ['S', 'M']
+      : ['XS', 'S', 'M', 'L'];
+
+  const sizeSelectionText =
+    product[0].category === 'Doll' || product[0].category === 'Cups'
+      ? 'Pick the size:'
+      : 'Pick your size:';    
+
   return (
     <div className="flex flex-col items-center justify-center w-100vw bg-gray mx-auto py-2">
       <div className="bg-white rounded-lg shadow-md w-100">
@@ -37,43 +52,24 @@ const DetailsItem = ({ product }) => {
                 <span className="text-gray-400 mr-4">COLOR:</span>
                 <span className="text-gray-700">{product[0].color}</span>
               </div>
-              <div className="flex flex-col items-start mb-8">
-                <span className="font-medium text-blue-500">Pick your size:</span>
-                <div className="flex space-x-2 mt-2">
-                  <button
-                    className={`bg-gray-200 text-gray-700 px-4 py-2 rounded-md ${
-                      selectedSize === 'XS' ? 'bg-blue-500 text-white' : ''
-                    }`}
-                    onClick={() => handleSizeClick('XS')}
-                  >
-                    XS
-                  </button>
-                  <button
-                    className={`bg-gray-200 text-gray-700 px-4 py-2 rounded-md ${
-                      selectedSize === 'S' ? 'bg-blue-500 text-white' : ''
-                    }`}
-                    onClick={() => handleSizeClick('S')}
-                  >
-                    S
-                  </button>
-                  <button
-                    className={`bg-gray-200 text-gray-700 px-4 py-2 rounded-md ${
-                      selectedSize === 'M' ? 'bg-blue-500 text-white' : ''
-                    }`}
-                    onClick={() => handleSizeClick('M')}
-                  >
-                    M
-                  </button>
-                  <button
-                    className={`bg-gray-200 text-gray-700 px-4 py-2 rounded-md ${
-                      selectedSize === 'L' ? 'bg-blue-500 text-white' : ''
-                    }`}
-                    onClick={() => handleSizeClick('L')}
-                  >
-                    L
-                  </button>
+              {showSizeButtons && (
+                <div className="flex flex-col items-start mb-8">
+                  <span className="font-medium text-blue-500">{sizeSelectionText}</span>
+                  <div className="flex space-x-2 mt-2">
+                    {allowedSizes.map((size) => (
+                      <button
+                        key={size}
+                        className={`bg-gray-200 text-gray-700 px-4 py-2 rounded-md ${
+                          selectedSize === size ? 'bg-blue-500 text-white' : ''
+                        }`}
+                        onClick={() => handleSizeClick(size)}
+                      >
+                        {size}
+                      </button>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
               <button className="bg-blue-500 text-white px-4 py-2 rounded-md mt-auto">
                 ADD TO CART
               </button>
