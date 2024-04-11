@@ -48,10 +48,12 @@ const DetailsItem = ({ product }) => {
                 <span className="text-gray-400 mr-4">Selling Price:</span>
                 <span className="text-green-500 font-semibold">$ {product[0].sale_price}</span>
               </div>
-              <div className="flex items-start mb-4">
-                <span className="text-gray-400 mr-4">COLOR:</span>
-                <span className="text-gray-700">{product[0].color}</span>
-              </div>
+              {(product[0].category === 'Clothes' || product[0].category === 'Cups') && (
+                <div className="flex items-start mb-4">
+                  <span className="text-gray-400 mr-4">COLOR:</span>
+                  <span className="text-gray-700">{product[0].color}</span>
+                </div>
+              )}
               {showSizeButtons && (
                 <div className="flex flex-col items-start mb-8">
                   <span className="font-medium text-blue-500">{sizeSelectionText}</span>
