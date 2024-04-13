@@ -20,12 +20,16 @@ const DetailsLogic = () => {
   const relatedCat = filteredItem[0].category;
   const filteredRelated = productItems.filter((product) => product.category == relatedCat);
   return (
-    <div>
-      {filteredItem && <DetailsItem product={filteredItem} />}
-      {!filteredItem && <p>Loading product details...</p>}
-      {filteredRelated && <RelatedProducts products={filteredRelated} />}
-      {!filteredRelated && <p>Loading product details...</p>}
-    </div>
+    <div className="w-full">
+      <div>
+        {filteredItem && <DetailsItem product={filteredItem} />}
+        {!filteredItem && <p>Loading product details...</p>}
+      </div>
+      <div>
+        {filteredRelated && <RelatedProducts products={filteredRelated} />}
+        {!filteredRelated && <p>Loading product details...</p>}
+      </div>
+    </div>  
   );
 };
 

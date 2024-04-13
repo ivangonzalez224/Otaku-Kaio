@@ -24,8 +24,8 @@ const DetailsItem = ({ product }) => {
       : 'Pick your size:';    
 
   return (
-    <div className="flex flex-col items-center justify-center w-100vw bg-gray mx-auto py-2">
-      <div className="bg-white rounded-lg shadow-md w-100">
+    <div className="flex flex-col items-center justify-center w-100vw bg-gray mx-auto py-2 box-border">
+      <div className="bg-white rounded-lg shadow-md w-100 box-border">
         <div className="flex items-center pl-2 pt-2"> 
           <button className="text-gray-500 bg-white hover:underline focus:outline-none" onClick={() => window.history.back()}>
             Store 
