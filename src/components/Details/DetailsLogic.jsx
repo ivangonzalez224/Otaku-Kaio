@@ -21,12 +21,12 @@ const DetailsLogic = () => {
   const filteredRelated = productItems.filter((product) => product.category == relatedCat);
   return (
     <div className="w-full">
-      <div>
+      <div className="w-full">
         {filteredItem && <DetailsItem product={filteredItem} />}
         {!filteredItem && <p>Loading product details...</p>}
       </div>
-      <div>
-        {filteredRelated && <RelatedProducts products={filteredRelated} />}
+      <div className="flex items-center justify-center">
+        {filteredRelated && <RelatedProducts products={filteredRelated} className="justify-self-start" />}
         {!filteredRelated && <p>Loading product details...</p>}
       </div>
     </div>  

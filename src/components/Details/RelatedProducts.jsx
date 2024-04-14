@@ -26,8 +26,8 @@ const RelatedProducts = ({ products }) => {
   };
 
   return (
-    <div className="box-border mt-20">
-      <h6>CUSTOMERS WHO VIEWED THIS PRODUCT ALSO VIEWED</h6>
+    <div className="w-5/6 flex flex-col items-start justify-center border-t border-gray-200 box-border mt-20 pt-6 px-10">
+      <h6 className="text-left text-gray-600">CUSTOMERS WHO VIEWED THIS PRODUCT ALSO VIEWED</h6>
       <Carousel responsive={responsive}>
         {products.map((product) => (
           <RelatedItem

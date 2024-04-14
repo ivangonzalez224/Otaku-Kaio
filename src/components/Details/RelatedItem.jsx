@@ -6,9 +6,9 @@ const RelatedItem = ({ image, name, priceList, sellingPrice }) => {
   return (
     <div className="bg-white rounded-md p-4 box-border">
       <img src={image} alt={name} className="mb-2" />
-      <h6 className="text-gray-500 text-lg font-medium">{name}</h6>
-      <p className="text-gray-400 line-through">{priceList}</p>
-      <p className="text-green-500 font-bold">${sellingPrice}</p>
+      <h6 className="text-sm text-gray-500 text-lg font-medium text-left">{name}</h6>
+      <p className="text-sm text-gray-400 line-through text-left">{priceList}</p>
+      <p className="text-green-500 text-left">${sellingPrice}</p>
     </div>
   );
 };
