@@ -24,7 +24,6 @@ const RelatedProducts = ({ products }) => {
       items: 1,
     },
   };
-
   return (
     <div className="w-5/6 flex flex-col items-start justify-center border-t border-gray-200 box-border mt-20 pt-6 px-10">
       <h6 className="text-left text-gray-600">CUSTOMERS WHO VIEWED THIS PRODUCT ALSO VIEWED</h6>

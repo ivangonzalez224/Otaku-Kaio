@@ -25,7 +25,7 @@ const DetailsLogic = () => {
         {filteredItem && <DetailsItem product={filteredItem} />}
         {!filteredItem && <p>Loading product details...</p>}
       </div>
-      <div className="flex items-center justify-center">
+      <div className="w-full flex items-center justify-center">
         {filteredRelated && <RelatedProducts products={filteredRelated} className="justify-self-start" />}
         {!filteredRelated && <p>Loading product details...</p>}
       </div>

@@ -26,7 +26,7 @@ const DetailsItem = ({ product }) => {
   return (
     <div className="flex flex-col items-center justify-center w-5/6 bg-gray mx-auto py-2 box-border">
       <div className="flex flex-col items-center justify-center bg-white rounded-lg shadow-md w-5/6 box-border">
-        <div className="flex items-center pl-2 pt-2"> 
+        <div className="flex w-full pl-2 justigy-start items-center pt-2"> 
           <button className="text-gray-500 bg-white hover:underline focus:outline-none" onClick={() => window.history.back()}>
             Store 
           </button>
