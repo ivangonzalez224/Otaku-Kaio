@@ -25,7 +25,7 @@ async function createUser() {
   };
 
   try {
-    const response = await fetch('http://127.0.0.1:3000/api/v1/users', {
+    const response = await fetch('http://127.0.0.1:3000/auth/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
