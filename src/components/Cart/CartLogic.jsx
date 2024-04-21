@@ -1,3 +1,5 @@
+import CartItem from './CartItem';
+
 const CartLogic = ({ cartItems, onRemoveItem, onQuantityChange, subtotal, discount, shipping, tax, total }) => {
   return (
     <div className="bg-white rounded-md shadow-md p-4 flex flex-col">
