@@ -3,9 +3,15 @@ import { useState } from 'react';
 
 const DetailsItem = ({ product }) => {
   const [selectedSize, setSelectedSize] = useState(null);
+  const [quantity, setQuantity] = useState(1);
 
   const handleSizeClick = (size) => {
     setSelectedSize(size);
+  };
+
+  const handleQuantityChange = (event) => {
+    const value = parseInt(event.target.value);
+    setQuantity(value);
   };
 
   const showSizeButtons =
@@ -72,6 +78,17 @@ const DetailsItem = ({ product }) => {
                   </div>
                 </div>
               )}
+              <div className="flex items-center mb-4">
+                <span className="text-gray-400 mr-4">Select the quantity:</span>
+                <input
+                  type="number"
+                  className="w-16 h-10 px-2 rounded-md border border-gray-300"
+                  min="1"
+                  max="10"
+                  value={quantity}
+                  onChange={handleQuantityChange}
+                />
+              </div>
               <button className="bg-blue-500 text-white px-4 py-2 rounded-md mt-auto">
                 ADD TO CART
               </button>

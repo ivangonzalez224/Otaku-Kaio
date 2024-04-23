@@ -46,7 +46,7 @@ async function createUser() {
 
 const App = () => {
   useEffect(() => {
-    createUser();
+    //createUser();
   }, []);
   
   return (
