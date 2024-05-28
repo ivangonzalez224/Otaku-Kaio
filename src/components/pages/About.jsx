@@ -27,7 +27,10 @@ const About = () =>  (
         <h2 className="text-3xl font-bold mb-4">Our Story</h2>
         <p className="text-lg mb-4">Otaku Kaio was founded in 2023 by a group of dedicated otakus who wanted to create a place where fans could find high-quality products and connect with a like-minded community. From humble beginnings as a small online store, we've grown into a beloved brand with customers worldwide.</p>
         <p className="text-lg mb-6">Our journey has been fueled by our love for anime and manga, and we strive to share that passion with every product we offer.</p>
-        <img src="/images/our-story.jpg" alt="Our Story" className="w-full h-64 object-cover rounded-lg shadow-lg" />
+        <div className="flex justify-center space-x-4">
+		  <img src="https://res.cloudinary.com/dv1mouzbi/image/upload/v1716899010/devSources/storySecAbou1_bk2tov.png" alt="Our Story" className="w-2/5 h-64 object-cover rounded-lg shadow-lg" />
+		  <img src="https://res.cloudinary.com/dv1mouzbi/image/upload/v1716899018/devSources/storySecAbou2_aaa8xu.png" alt="Our Story" className="w-2/5 h-64 object-cover rounded-lg shadow-lg" />
+	    </div>
       </section>
 
       {/* Our Products Section */}
