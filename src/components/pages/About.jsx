@@ -16,7 +16,10 @@ const About = () =>  (
       <section className="py-12 px-4 md:px-8 lg:px-16">
         <h2 className="text-3xl font-bold mb-4">Welcome to Otaku Kaio</h2>
         <p className="text-lg mb-6">At Otaku Kaio, we are passionate about bringing the best of otaku culture to fans around the world. From anime-inspired clothing to collectible manga, we have everything you need to celebrate your favorite series.</p>
-        <img src="/images/otaku-culture.jpg" alt="Otaku Culture" className="w-full h-64 object-cover rounded-lg shadow-lg" />
+        <div className="flex justify-center space-x-4">
+		  <img src="https://res.cloudinary.com/dv1mouzbi/image/upload/v1716898280/devSources/introSecAbou1_u1chu4.png" alt="Otaku Culture" className="w-2/5 h-64 object-cover rounded-lg shadow-lg" />
+		  <img src="https://res.cloudinary.com/dv1mouzbi/image/upload/v1716898291/devSources/introSectAbou2_cn2w8c.png" alt="Another Aspect of Otaku Culture" className="w-2/5 h-64 object-cover rounded-lg shadow-lg" />
+	    </div>
       </section>
 
       {/* Our Story Section */}
