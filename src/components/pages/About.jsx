@@ -4,7 +4,7 @@ import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 const About = () =>  (
   <div className="bg-gray-100 text-gray-800">
       {/* Header Section */}
-      <header className="relative h-64 bg-cover bg-center" style={{ backgroundImage: 'url(/images/anime-background.jpg)' }}>
+      <header className="relative h-64 bg-cover bg-center" style={{ backgroundImage: 'url(https://res.cloudinary.com/dv1mouzbi/image/upload/v1717009881/devSources/headeSectBackgrAbou_qjyzfz.png)' }}>
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex items-center justify-center h-full">
           <h1 className="text-white text-4xl font-bold">Otaku Kaio</h1>
@@ -101,20 +101,7 @@ const About = () =>  (
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 md:px-8 lg:px-16 bg-gray-900 text-gray-400">
-        <div className="flex justify-between">
-          <div>
-            <h3 className="text-xl font-bold text-gray-100">Otaku Kaio</h3>
-            <p className="text-gray-400 mt-2">&copy; 2024 Otaku Kaio. All rights reserved.</p>
-          </div>
-          <div className="space-x-4">
-            <a href="/home" className="text-gray-400 hover:text-gray-100">Home</a>
-            <a href="/shop" className="text-gray-400 hover:text-gray-100">Shop</a>
-            <a href="/contact" className="text-gray-400 hover:text-gray-100">Contact</a>
-            <a href="/privacy-policy" className="text-gray-400 hover:text-gray-100">Privacy Policy</a>
-          </div>
-        </div>
-      </footer>
+      <FooterLogic />
     </div>
   );
 
