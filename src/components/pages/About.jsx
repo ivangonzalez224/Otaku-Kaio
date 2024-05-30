@@ -52,16 +52,18 @@ const About = () =>  (
             <h3 className="text-xl font-semibold mt-2">Mangas</h3>
             <p className="text-gray-700">Discover our vast selection of popular and rare manga titles.</p>
           </div>
-          <div className="bg-white p-4 rounded-lg shadow-lg">
-            <img src="/images/products/dolls.jpg" alt="Dolls" className="w-full h-40 object-cover rounded-t-lg" />
-            <h3 className="text-xl font-semibold mt-2">Dolls</h3>
-            <p className="text-gray-700">Find beautifully crafted dolls and figures of your favorite characters.</p>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow-lg">
-            <img src="/images/products/games.jpg" alt="Games" className="w-full h-40 object-cover rounded-t-lg" />
-            <h3 className="text-xl font-semibold mt-2">Games</h3>
-            <p className="text-gray-700">Get your hands on the latest anime-themed games and merchandise.</p>
-          </div>
+          <div className="lg:col-span-3 flex justify-center space-x-6">
+	        <div className="bg-white p-4 rounded-lg shadow-lg">
+	          <img src="/images/products/dolls.jpg" alt="Dolls" className="w-full h-40 object-cover rounded-t-lg" />
+	          <h3 className="text-xl font-semibold mt-2">Dolls</h3>
+	          <p className="text-gray-700">Find beautifully crafted dolls and figures of your favorite characters.</p>
+	        </div>
+	        <div className="bg-white p-4 rounded-lg shadow-lg">
+	          <img src="/images/products/games.jpg" alt="Games" className="w-full h-40 object-cover rounded-t-lg" />
+	          <h3 className="text-xl font-semibold mt-2">Games</h3>
+	          <p className="text-gray-700">Get your hands on the latest anime-themed games and merchandise.</p>
+	        </div>
+	      </div>
         </div>
       </section>
 
