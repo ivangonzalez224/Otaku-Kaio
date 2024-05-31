@@ -13,7 +13,7 @@ const About = () =>  (
       </header>
 
       {/* Introduction Section */}
-      <section className="py-12 px-4 md:px-8 lg:px-16">
+      <section className="py-12 px-4 md:px-8 lg:px-16 bg-white">
         <h2 className="text-3xl font-bold mb-4">Welcome to Otaku Kaio</h2>
         <p className="text-lg mb-6">At Otaku Kaio, we are passionate about bringing the best of otaku culture to fans around the world. From anime-inspired clothing to collectible manga, we have everything you need to celebrate your favorite series.</p>
         <div className="flex justify-center space-x-4">
@@ -23,7 +23,7 @@ const About = () =>  (
       </section>
 
       {/* Our Story Section */}
-      <section className="py-12 px-4 md:px-8 lg:px-16 bg-white">
+      <section className="py-12 px-4 md:px-8 lg:px-16">
         <h2 className="text-3xl font-bold mb-4">Our Story</h2>
         <p className="text-lg mb-4">Otaku Kaio was founded in 2023 by a group of dedicated otakus who wanted to create a place where fans could find high-quality products and connect with a like-minded community. From humble beginnings as a small online store, we've grown into a beloved brand with customers worldwide.</p>
         <p className="text-lg mb-6">Our journey has been fueled by our love for anime and manga, and we strive to share that passion with every product we offer.</p>
@@ -34,31 +34,31 @@ const About = () =>  (
       </section>
 
       {/* Our Products Section */}
-      <section className="py-12 px-4 md:px-8 lg:px-16">
+      <section className="py-12 px-4 md:px-8 lg:px-16 bg-white">
         <h2 className="text-3xl font-bold mb-4">What We Offer</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-white p-4 rounded-lg shadow-lg">
-            <img src="/images/products/clothes.jpg" alt="Clothes" className="w-full h-40 object-cover rounded-t-lg" />
+          <div className="bg-blue-100 p-4 rounded-lg shadow-lg">
+            <img src="https://res.cloudinary.com/dv1mouzbi/image/upload/v1717157127/devSources/clothesProduSectAbout_lyww5d.png" />
             <h3 className="text-xl font-semibold mt-2">Clothes</h3>
             <p className="text-gray-700">Explore our collection of anime-inspired clothing and accessories.</p>
           </div>
-          <div className="bg-white p-4 rounded-lg shadow-lg">
+          <div className="bg-yellow-100 p-4 rounded-lg shadow-lg">
             <img src="/images/products/mugs.jpg" alt="Mugs" className="w-full h-40 object-cover rounded-t-lg" />
             <h3 className="text-xl font-semibold mt-2">Mugs</h3>
             <p className="text-gray-700">Start your day with a coffee in one of our themed mugs.</p>
           </div>
-          <div className="bg-white p-4 rounded-lg shadow-lg">
+          <div className="bg-blue-100 p-4 rounded-lg shadow-lg">
             <img src="/images/products/mangas.jpg" alt="Mangas" className="w-full h-40 object-cover rounded-t-lg" />
             <h3 className="text-xl font-semibold mt-2">Mangas</h3>
             <p className="text-gray-700">Discover our vast selection of popular and rare manga titles.</p>
           </div>
           <div className="lg:col-span-3 flex justify-center space-x-6">
-	        <div className="bg-white p-4 rounded-lg shadow-lg">
+	        <div className="bg-yellow-100 p-4 rounded-lg shadow-lg">
 	          <img src="/images/products/dolls.jpg" alt="Dolls" className="w-full h-40 object-cover rounded-t-lg" />
 	          <h3 className="text-xl font-semibold mt-2">Dolls</h3>
 	          <p className="text-gray-700">Find beautifully crafted dolls and figures of your favorite characters.</p>
 	        </div>
-	        <div className="bg-white p-4 rounded-lg shadow-lg">
+	        <div className="bg-blue-100 p-4 rounded-lg shadow-lg">
 	          <img src="/images/products/games.jpg" alt="Games" className="w-full h-40 object-cover rounded-t-lg" />
 	          <h3 className="text-xl font-semibold mt-2">Games</h3>
 	          <p className="text-gray-700">Get your hands on the latest anime-themed games and merchandise.</p>
@@ -68,7 +68,7 @@ const About = () =>  (
       </section>
 
       {/* Community Section */}
-      <section className="py-12 px-4 md:px-8 lg:px-16 bg-white">
+      <section className="py-12 px-4 md:px-8 lg:px-16">
         <h2 className="text-3xl font-bold mb-4">Join Our Community</h2>
         <p className="text-lg mb-6">Follow us on social media and become a part of our vibrant otaku community. Stay updated with the latest product releases, events, and more.</p>
         <div className="flex space-x-4">
@@ -79,14 +79,14 @@ const About = () =>  (
       </section>
 
       {/* Customer Testimonials Section */}
-      <section className="py-12 px-4 md:px-8 lg:px-16">
+      <section className="py-12 px-4 md:px-8 lg:px-16 bg-white">
         <h2 className="text-3xl font-bold mb-4">What Our Customers Say</h2>
         <div className="space-y-6">
-          <div className="bg-white p-4 rounded-lg shadow-lg">
+          <div className="bg-blue-100 p-4 rounded-lg shadow-lg">
             <p className="text-gray-700 italic">"I love the variety of products at Otaku Kaio. The quality is always top-notch and the customer service is fantastic!"</p>
             <p className="text-gray-900 font-semibold mt-2">- Alex, Tokyo</p>
           </div>
-          <div className="bg-white p-4 rounded-lg shadow-lg">
+          <div className="bg-blue-100 p-4 rounded-lg shadow-lg">
             <p className="text-gray-700 italic">"Otaku Kaio is my go-to store for all my anime merch. They always have the latest releases!"</p>
             <p className="text-gray-900 font-semibold mt-2">- Maria, New York</p>
           </div>
@@ -94,7 +94,7 @@ const About = () =>  (
       </section>
 
       {/* Contact Us Section */}
-      <section className="py-12 px-4 md:px-8 lg:px-16 bg-white">
+      <section className="py-12 px-4 md:px-8 lg:px-16">
         <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
         <p className="text-lg mb-6">We'd love to hear from you! Whether you have a question about our products, need assistance with an order, or just want to talk about your favorite anime, we're here to help.</p>
         <p className="text-lg mb-6">You can reach us at:</p>
