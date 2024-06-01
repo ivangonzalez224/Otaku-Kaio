@@ -48,7 +48,7 @@ const About = () =>  (
             <p className="text-gray-700">Start your day with a coffee in one of our themed mugs.</p>
           </div>
           <div className="bg-blue-100 p-4 rounded-lg shadow-lg">
-            <img src="/images/products/mangas.jpg" alt="Mangas" className="w-full h-40 object-cover rounded-t-lg" />
+            <img src="https://res.cloudinary.com/dv1mouzbi/image/upload/v1717249039/devSources/mangasProdSectAbout_fu31v7.png" alt="Mangas" className="w-full h-40 object-cover rounded-t-lg" />
             <h3 className="text-xl font-semibold mt-2">Mangas</h3>
             <p className="text-gray-700">Discover our vast selection of popular and rare manga titles.</p>
           </div>
