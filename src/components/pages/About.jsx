@@ -38,17 +38,17 @@ const About = () =>  (
         <h2 className="text-3xl font-bold mb-4">What We Offer</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="bg-blue-100 p-4 rounded-lg shadow-lg">
-            <img src="https://res.cloudinary.com/dv1mouzbi/image/upload/v1717157127/devSources/clothesProduSectAbout_lyww5d.png" />
+            <img src="https://res.cloudinary.com/dv1mouzbi/image/upload/v1717157127/devSources/clothesProduSectAbout_lyww5d.png" alt="Clothes"/>
             <h3 className="text-xl font-semibold mt-2">Clothes</h3>
             <p className="text-gray-700">Explore our collection of anime-inspired clothing and accessories.</p>
           </div>
           <div className="bg-yellow-100 p-4 rounded-lg shadow-lg">
-            <img src="https://res.cloudinary.com/dv1mouzbi/image/upload/v1717160206/devSources/mugsProduSectAbout_qqfwba.png" />
+            <img src="https://res.cloudinary.com/dv1mouzbi/image/upload/v1717160206/devSources/mugsProduSectAbout_qqfwba.png" alt="Mugs"/>
             <h3 className="text-xl font-semibold mt-2">Mugs</h3>
             <p className="text-gray-700">Start your day with a coffee in one of our themed mugs.</p>
           </div>
           <div className="bg-blue-100 p-4 rounded-lg shadow-lg">
-            <img src="https://res.cloudinary.com/dv1mouzbi/image/upload/v1717249039/devSources/mangasProdSectAbout_fu31v7.png" alt="Mangas" className="w-full h-40 object-cover rounded-t-lg" />
+            <img src="https://res.cloudinary.com/dv1mouzbi/image/upload/v1717249039/devSources/mangasProdSectAbout_fu31v7.png" alt="Mangas" />
             <h3 className="text-xl font-semibold mt-2">Mangas</h3>
             <p className="text-gray-700">Discover our vast selection of popular and rare manga titles.</p>
           </div>
@@ -68,10 +68,10 @@ const About = () =>  (
       </section>
 
       {/* Community Section */}
-      <section className="py-12 px-4 md:px-8 lg:px-16">
+      <section className="py-12 px-4 md:px-8 lg:px-16 text-center">
         <h2 className="text-3xl font-bold mb-4">Join Our Community</h2>
         <p className="text-lg mb-6">Follow us on social media and become a part of our vibrant otaku community. Stay updated with the latest product releases, events, and more.</p>
-        <div className="flex space-x-4">
+        <div className="flex justify-center space-x-4">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-blue-600"><FaFacebook size={32} /></a>
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-blue-400"><FaTwitter size={32} /></a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-pink-600"><FaInstagram size={32} /></a>
