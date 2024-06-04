@@ -5,7 +5,7 @@ const PrivacyPolicy = () => {
     <div className="container mx-auto p-6">
       <h1 className="text-4xl font-bold mb-4">Privacy Policy</h1>
       <p className="mb-4">
-        Welcome to [Your Company Name]! This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from [Your Website URL] (the “Site”).
+        Welcome to Otaku Kaio! This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from otakukaion.com (the “Site”).
       </p>
       
       <h2 className="text-2xl font-semibold mb-2">PERSONAL INFORMATION WE COLLECT</h2>
@@ -59,10 +59,10 @@ const PrivacyPolicy = () => {
         For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e-mail at [Your Email] or by mail using the details provided below:
       </p>
       <p className="mb-4">
-        [Your Company Name] <br/>
-        [Street Address] <br/>
-        [City, State, ZIP Code] <br/>
-        [Country]
+        Otaku Kaion <br/>
+        Arequipa Street <br/>
+        Lima, Lima Metropolitana, 1584 <br/>
+        Perú
       </p>
     </div>
   );
