@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { FaRegHeart } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa";
 
@@ -16,7 +15,7 @@ const NavBar = () => {
       <ul className="flex items-center">
         <li className="flex items-center">
           <NavLink to="/">
-            <img src='' alt="Logo" className="w-10 h-10 mr-4" />
+            <img src='https://res.cloudinary.com/dv1mouzbi/image/upload/v1717613792/devSources/logoOtakuKaio_c7r103.png' alt="Logo" className="w-10 h-10 mr-4 rounded-full" />
           </NavLink>
         </li>
       </ul>
@@ -35,11 +34,6 @@ const NavBar = () => {
         </li>
       </ul>
       <ul className="flex items-center justify-end">
-        <li className="mr-4 flex items-center justify-center rounded-full border border-gray-700 px-4 py-3">
-          <NavLink to="/">
-            <FaRegHeart />
-          </NavLink>
-        </li>
         <li className="mr-4 flex items-center justify-center rounded-full border border-gray-700 px-4 py-3">
           <NavLink to="/cart">
             <IoCartOutline />
