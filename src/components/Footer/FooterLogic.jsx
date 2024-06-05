@@ -55,7 +55,7 @@ const FooterLogic = () => {
                   <a href="/cart" className="text-gray-600 hover:text-blue-500 text-gray-500 hover:text-blue-400">Cart</a>
                 </li>
                 <li>
-                  <a href="/privacy-policy" className="text-gray-600 hover:text-blue-500 text-gray-500 hover:text-blue-400">
+                  <a href="/privacypolicy" className="text-gray-600 hover:text-blue-500 text-gray-500 hover:text-blue-400">
                     Privacy Policy
                   </a>
                 </li>
