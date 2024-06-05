@@ -99,7 +99,7 @@ const About = () =>  (
         <p className="text-lg mb-6">We'd love to hear from you! Whether you have a question about our products, need assistance with an order, or just want to talk about your favorite anime, we're here to help.</p>
         <p className="text-lg mb-6">You can reach us at:</p>
         <p className="text-lg mb-2">Email: <a href="mailto:support@otakukaio.com" className="text-blue-600">support@otakukaio.com</a></p>
-        <p className="text-lg mb-6">Phone: <a href="tel:+1234567890" className="text-blue-600">+1 (234) 567-890</a></p>
+        <p className="text-lg mb-6">Phone: <a href="tel:+51906590278" className="text-blue-600">+1 (234) 567-890</a></p>
       </section>
 
       {/* Footer */}
