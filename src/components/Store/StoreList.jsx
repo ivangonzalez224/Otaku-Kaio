@@ -1,10 +1,14 @@
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import StoreItem from './StoreItem';
 import '../../App.css';
 
-const StoreList = ({ products }) => {
-  const [selectedCategory, setSelectedCategory] = useState('Clothes');
+const StoreList = ({ products, initialCategory }) => {
+  const [selectedCategory, setSelectedCategory] = useState(initialCategory);
+
+  useEffect(() => {
+    setSelectedCategory(initialCategory);
+  }, [initialCategory]);
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
@@ -15,46 +19,17 @@ const StoreList = ({ products }) => {
   return (
     <div>
       <div className="flex justify-start mb-6">
-        <button
-          className={`bg-white-500 text-[15px] text-blue border border-blue-500 py-1 px-3 rounded-md focus:outline-none mr-4 ${
-            selectedCategory === 'Clothes' ? 'bg-blue-500 text-white' : ''
-          }`}
-          onClick={() => handleCategoryClick('Clothes')}
-        >
-          Clothes
-        </button>
-        <button
-          className={`bg-white-500 text-[15px] text-blue border border-blue-500 focus:outline-none py-1 px-3 rounded-md mr-4 ${
-            selectedCategory === 'Animes' ? 'bg-blue-500 text-white' : ''
-          }`}
-          onClick={() => handleCategoryClick('Animes')}
-        >
-          Animes
-        </button>
-        <button
-          className={`bg-white-500 text-[15px] text-blue border border-blue-500 focus:outline-none py-1 px-3 rounded-md mr-4 ${
-            selectedCategory === 'Cups' ? 'bg-blue-500 text-white' : ''
-          }`}
-          onClick={() => handleCategoryClick('Cups')}
-        >
-          Cups
-        </button>
-        <button
-          className={`bg-white-500 text-[15px] text-blue border border-blue-500 focus:outline-none py-1 px-3 rounded-md mr-4 ${
-            selectedCategory === 'Games' ? 'bg-blue-500 text-white' : ''
-          }`}
-          onClick={() => handleCategoryClick('Games')}
-        >
-          Games
-        </button>
-        <button
-          className={`bg-white-500 text-[15px] text-blue border border-blue-500 focus:outline-none py-1 px-3 rounded-md ${
-            selectedCategory === 'Doll' ? 'bg-blue-500 text-white' : ''
-          }`}
-          onClick={() => handleCategoryClick('Doll')}
-        >
-          Dolls
-        </button>
+        {['Clothes', 'Mangas', 'Mugs', 'Games', 'Dolls'].map((category) => (
+          <button
+            key={category}
+            className={`bg-white-500 text-[15px] text-blue border border-blue-500 py-1 px-3 rounded-md focus:outline-none mr-4 ${
+              selectedCategory === category ? 'bg-blue-500 text-white' : ''
+            }`}
+            onClick={() => handleCategoryClick(category)}
+          >
+            {category}
+          </button>
+        ))}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {filteredProducts.map((product) => (
@@ -74,6 +49,7 @@ const StoreList = ({ products }) => {
 
 StoreList.propTypes = {
   products: PropTypes.array.isRequired,
+  initialCategory: PropTypes.string.isRequired,
 };
 
 export default StoreList;
