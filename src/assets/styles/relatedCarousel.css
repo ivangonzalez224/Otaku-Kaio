@@ -1,0 +1,25 @@
+.custom-carousel .react-multiple-carousel__arrow--left {
+  left: -25px;
+  margin-left: 10px;
+  z-index: 10;
+}
+
+.custom-carousel .react-multiple-carousel__arrow--right {
+  right: -25px;
+  margin-right: 12px;
+  z-index: 1;
+}
+
+.custom-carousel .react-multiple-carousel__arrow {
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.custom-carousel .react-multiple-carousel__arrow::before {
+  color: #aaa;
+  font-size: 31px;
+}
