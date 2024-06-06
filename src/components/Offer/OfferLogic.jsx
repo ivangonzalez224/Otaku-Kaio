@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { getLandings } from '../../redux/landings/LandingsSlice';
 
 const OfferLogic = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { landingItems } = useSelector((state) => state.landings);
   
   useEffect(() => {
@@ -13,13 +15,19 @@ const OfferLogic = () => {
   });
   const offerOptions = landingItems.filter(cat => cat.category === 'offer');
   
+  const handleOpenStore = () => {
+    navigate('/store');
+  };
+
     return (
       <div className="mainContainer flex justify-center items-center mt-16 mb-16">
         <div className="offerMain grid grid-cols-3 gap-8 w-full md:w-[82%]">
           <div className="offerCallAction flex flex-col items-start">
             <h2 className="text-xl font-bold mb-2">Daily offer</h2>
             <p className="text-gray-600 mb-4 text-left">Check out our daily offers combined with big discounts on some products. Do not miss your chance.</p>
-            <button className="inline-flex items-center px-4 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-700">
+            <button className="inline-flex items-center px-4 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-700"
+            onClick={handleOpenStore}
+            >
               Open Store
             </button>
           </div>
