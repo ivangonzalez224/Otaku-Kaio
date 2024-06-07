@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa";
 
 const NavBar = () => {
-  const [activeLink, setActiveLink] = useState("/");
-
-  const handleNavLinkClick = (to) => {
-    setActiveLink(to);
-  };
+  const location = useLocation();
+  const activeLink = location.pathname;
 
   return (
     <nav className="w-full px-4 flex items-center justify-between h-16 bg-white font-bold text-gray-700 sticky top-0 z-1 box-border">
@@ -20,16 +17,16 @@ const NavBar = () => {
         </li>
       </ul>
       <ul className="w-99 flex items-center justify-around bg-gray-200 px-2 py-1 rounded-lg">
-        <li className={`rounded-lg px-4 py-2 hover:bg-gray-300 cursor-pointer ${activeLink === "/" ? 'bg-white' : ''}`} onClick={() => handleNavLinkClick("/")}>
+        <li className={`rounded-lg px-4 py-2 hover:bg-gray-300 cursor-pointer ${activeLink === "/" ? 'bg-white' : ''}`} >
           <NavLink to="/">Home</NavLink>
         </li>
-        <li className={`rounded-lg px-4 py-2 hover:bg-gray-300 cursor-pointer ${activeLink === "/about" ? 'bg-white' : ''}`} onClick={() => handleNavLinkClick("/about")}>
+        <li className={`rounded-lg px-4 py-2 hover:bg-gray-300 cursor-pointer ${activeLink === "/about" ? 'bg-white' : ''}`} >
           <NavLink to="/about">About</NavLink>
         </li>
-        <li className={`rounded-lg px-4 py-2 hover:bg-gray-300 cursor-pointer ${activeLink === "/store" ? 'bg-white' : ''}`} onClick={() => handleNavLinkClick("/store")}>
+        <li className={`rounded-lg px-4 py-2 hover:bg-gray-300 cursor-pointer ${activeLink === "/store" ? 'bg-white' : ''}`} >
           <NavLink to="/store">Store</NavLink>
         </li>
-        <li className={`rounded-lg px-4 py-2 hover:bg-gray-300 cursor-pointer ${activeLink === "/offers" ? 'bg-white' : ''}`} onClick={() => handleNavLinkClick("/offers")}>
+        <li className={`rounded-lg px-4 py-2 hover:bg-gray-300 cursor-pointer ${activeLink === "/offers" ? 'bg-white' : ''}`} >
           <NavLink to="/offers">Offers</NavLink>
         </li>
       </ul>
