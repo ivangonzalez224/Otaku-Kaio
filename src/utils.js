@@ -1,3 +1,6 @@
+import store from './redux/store';
+import { setUser } from './redux/user/UserSlice';
+
 export const loginUser = async (email, password) => {
   try {
     const response = await fetch('http://127.0.0.1:3000/auth/login', {
