@@ -20,7 +20,7 @@ const RelatedProducts = ({ products }) => {
       breakpoint: { max: 1160, min: 745 },
       items: 3,
     },
-    tablet: {
+    stablet: {
       breakpoint: { max: 745, min: 665 },
       items: 2,
     },

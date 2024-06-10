@@ -20,8 +20,9 @@ const App = () => {
   useEffect(() => {
     const demoEmail = 'demo_user@example.com';
     const demoPassword = 'password123';
+    // login as a demo user
     loginUser(demoEmail, demoPassword);
-  }, [];
+  }, []);
   
   return (
     <div className="main-container">
