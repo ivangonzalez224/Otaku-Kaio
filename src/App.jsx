@@ -9,6 +9,7 @@ import Details from './components/pages/Details';
 import Cart from './components/pages/Cart';
 import NavBar from './components/NavBar';
 import PrivacyPolicy from './components/pages/PrivacyPolicy';
+import UserProfile from './components/pages/UserProfile';
 import store from './redux/store'
 import './App.css';
 import { getLandings } from './redux/landings/LandingsSlice';
@@ -35,6 +36,7 @@ const App = () => {
         <Route path="/offers" element={<Offers />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="/profile" element={<UserProfile />} />
       </Routes>
     </div>
   );
