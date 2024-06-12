@@ -1,19 +1,19 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { getOffers } from '../../redux/offers/OffersSlice';
-import OfferItem from './OfferItem';
+import { getDiscounts } from '../../redux/offers/DiscountsSlice';
+import DiscountItem from './DiscountItem';
 
-const OfferList = () => {
+const DiscountList = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { offerItems } = useSelector((state) => state.offers);
+  const { discountItems } = useSelector((state) => state.offers);
 
   useEffect(() => {
-    if (offerItems.length === 0) {
-      dispatch(getOffers());
+    if (discountItems.length === 0) {
+      dispatch(getDiscounts());
     }
-  }, [dispatch, offerItems.length]);
+  }, [dispatch, discountItems.length]);
 
   const categories = [
     { name: 'Clothes', callToAction: 'Latest fashion at unbeatable prices!' },
@@ -38,7 +38,7 @@ const OfferList = () => {
               .filter((item) => item.category === category.name)
               .map((item) => (
                 <div key={item.name} onClick={handleItemClick}>
-                  <OfferItem {...item} />
+                  <DiscountItem {...item} />
                 </div>
               ))}
           </div>
@@ -48,4 +48,4 @@ const OfferList = () => {
   );
 };
 
-export default OfferList;
+export default DiscountList;
