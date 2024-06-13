@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { getDiscounts } from '../../redux/offers/DiscountsSlice';
+import { getDiscounts } from '../../redux/discounts/DiscountsSlice';
 import DiscountItem from './DiscountItem';
 
 const DiscountList = () => {
