@@ -7,7 +7,7 @@ import DiscountItem from './DiscountItem';
 const DiscountList = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { discountItems } = useSelector((state) => state.offers);
+  const { discountItems } = useSelector((state) => state.discounts);
 
   useEffect(() => {
     if (discountItems.length === 0) {
