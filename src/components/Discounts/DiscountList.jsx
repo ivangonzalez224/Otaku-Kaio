@@ -30,7 +30,7 @@ const DiscountList = () => {
   return (
     <div className="offers-page p-6">
       {categories.map((category) => (
-        <div key={category.name} className="category-section bg-blue-500 p-6 my-6 rounded-md w-full md:w-3/4 mx-auto">
+        <div key={category.name} className="category-section bg-blue-300 p-6 my-6 rounded-md w-full md:w-6/7 mx-auto">
           <h2 className="text-white text-xl font-bold mb-4">{category.name} Offers</h2>
           <p className="text-white mb-4">{category.callToAction}</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
