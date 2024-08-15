@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './components/pages/Home';
@@ -13,16 +14,23 @@ import UserProfile from './components/pages/UserProfile';
 import store from './redux/store'
 import './App.css';
 import { getLandings } from './redux/landings/LandingsSlice';
+import { setUser } from './redux/user/UserSlice';
 import { loginUser } from './utils';
 
 store.dispatch(getLandings());
 
 const App = () => {
+  const user = useSelector((state) => state.user.userInfo);
   useEffect(() => {
-    const demoEmail = 'demo_user@example.com';
-    const demoPassword = 'password123';
-    // login as a demo user
-    loginUser(demoEmail, demoPassword);
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+      store.dispatch(setUser(JSON.parse(storedUser)));
+    } else {
+        const demoEmail = 'demo_user@example.com';
+        const demoPassword = 'password123';
+        // login as a demo user
+        loginUser(demoEmail, demoPassword);
+    }
   }, []);
   
   return (

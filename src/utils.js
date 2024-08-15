@@ -23,9 +23,8 @@ export const loginUser = async (email, password) => {
     const data = await response.json();
     console.log('User logged in successfully:', data);
     // Store the JWT token
-    localStorage.setItem('token', data.token);
-    // Dispatch user data to Redux store
-    store.dispatch(setUser(data.user));
+    store.dispatch(setUser(data));
+    localStorage.setItem('user', JSON.stringify(data));
   } catch (error) {
     console.error('Error logging in:', error);
   }

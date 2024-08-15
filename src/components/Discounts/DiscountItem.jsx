@@ -25,10 +25,10 @@ const DiscountItem = ({ name, image, current_price, offer_price, normal_price, p
 DiscountItem.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  current_price: PropTypes.number.isRequired,
-  offer_price: PropTypes.number.isRequired,
-  normal_price: PropTypes.number.isRequired,
-  percentage: PropTypes.string.isRequired,
+  current_price: PropTypes.string.isRequired,
+  offer_price: PropTypes.string.isRequired,
+  normal_price: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired,
 };
 
 export default DiscountItem;
