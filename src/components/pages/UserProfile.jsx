@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import defaultProfileImage from '../../assets/images/otaku-profile-photo.png';
 
 const UserProfile = () => {
   const user = useSelector((state) => state.user.userInfo.data);
@@ -9,10 +10,19 @@ const UserProfile = () => {
   }
 
   return (
-    <div className="user-profile">
-      <h1>User Profile</h1>
-      <p><strong>Name:</strong> {user.name}</p>
-      <p><strong>Email:</strong> {user.email}</p>
+    <div className="flex flex-col items-center justify-center h-screen pb-12">
+      <h1 className="text-2xl font-bold mb-8">User Profile</h1>
+      <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+        <img
+            src={defaultProfileImage}
+            alt="Profile"
+            className="w-24 h-24 mx-auto rounded-full mb-4" // Tamaño y estilo de la imagen
+        />
+        <div className="text-left">
+          <p className="mb-2"><strong>Name:</strong> {user.name}</p>
+          <p><strong>Email:</strong> {user.email}</p>
+        </div>  
+      </div>  
     </div>
   );
 };
