@@ -1,9 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 const DetailsItem = ({ product }) => {
   const [selectedSize, setSelectedSize] = useState(null);
   const [quantity, setQuantity] = useState(1);
+  // get user userInfo
+  const user = useSelector((state) => state.user.userInfo);
 
   const handleSizeClick = (size) => {
     setSelectedSize(size);
@@ -12,6 +15,41 @@ const DetailsItem = ({ product }) => {
   const handleQuantityChange = (event) => {
     const value = parseInt(event.target.value);
     setQuantity(value);
+  };
+
+  const handleAddToCart = async () => {
+    if (!user) {
+      console.log("User not logged in");
+      return;
+    }
+
+    // Data to send to backend
+    const cartData = {
+      quantity: quantity,
+      size: selectedSize,
+      user_id: user.id,
+      product_id: product[0].id,
+    };
+
+    try {
+      // POST to backend to add the product to the cart
+      const response = await fetch('http://127.0.0.1:3000/api/v1/carts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ cart: cartData }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to add product to cart');
+      }
+
+      const data = await response.json();
+      console.log('Product added to cart successfully:', data);
+    } catch (error) {
+      console.error('Error adding to cart:', error);
+    }
   };
 
   const showSizeButtons =
@@ -27,7 +65,7 @@ const DetailsItem = ({ product }) => {
   const sizeSelectionText =
     product[0].category === 'Doll' || product[0].category === 'Cups'
       ? 'Pick the size:'
-      : 'Pick your size:';    
+      : 'Pick your size:';
 
   return (
     <div className="flex flex-col items-center justify-center w-5/6 bg-gray mx-auto py-2 box-border">
@@ -89,7 +127,10 @@ const DetailsItem = ({ product }) => {
                   onChange={handleQuantityChange}
                 />
               </div>
-              <button className="bg-blue-500 text-white px-4 py-2 rounded-md mt-auto">
+              <button
+                className="bg-blue-500 text-white px-4 py-2 rounded-md mt-auto"
+                onClick={handleAddToCart}
+              >
                 ADD TO CART
               </button>
             </div>
