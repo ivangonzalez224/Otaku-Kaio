@@ -17,17 +17,17 @@ const DetailsItem = ({ product }) => {
     setQuantity(value);
   };
 
-  const handleAddToCart = async () => {
+  const handleAddToCart = async (event) => {
+    event.preventDefault();
     if (!user) {
       console.log("User not logged in");
       return;
     }
-
     // Data to send to backend
     const cartData = {
       quantity: quantity,
       size: selectedSize,
-      user_id: user.id,
+      user_id: user.data.id,
       product_id: product[0].id,
     };
 

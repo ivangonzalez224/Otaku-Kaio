@@ -11,7 +11,7 @@ const CartLogic = ({ cartItems, onRemoveItem, onQuantityChange, subtotal, discou
         <div className="flex-grow">
           {cartItems.map((item) => (
             <CartItem
-              key={item.id} // Replace with unique identifier for each item
+              key={item.id}
               item={item}
               onRemoveItem={onRemoveItem}
               onQuantityChange={onQuantityChange}

@@ -1,5 +1,6 @@
 const CartItem = ({ item, onRemoveItem, onQuantityChange }) => {
-  const { image, name, price, quantity } = item;
+  const { image, name, sale_price } = item.product;
+  const { quantity } = item;
 
   return (
     <div className="bg-gray-100 rounded-md shadow-sm p-4 flex items-center">
@@ -29,7 +30,7 @@ const CartItem = ({ item, onRemoveItem, onQuantityChange }) => {
           >
             +
           </button>
-          <span className="ml-4 text-black font-medium">Price: ${price.toFixed(2)}</span>
+          <span className="ml-4 text-black font-medium">Price: ${parseFloat(sale_price).toFixed(2)}</span>
         </div>
       </div>
     </div>
