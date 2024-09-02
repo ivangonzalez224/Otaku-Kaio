@@ -40,7 +40,7 @@ const CartLogic = ({ cartItems, onRemoveItem, onQuantityChange, subtotal, discou
             <span>Total:</span>
             <span>${total.toFixed(2)}</span>
           </div>
-          <button className="w-full bg-yellow-500 hover:bg-yellow-700 text-white py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
+          <button className="w-full bg-yellow-500 mt-8 hover:bg-yellow-700 text-white py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
             Pay Now
           </button>
         </div>

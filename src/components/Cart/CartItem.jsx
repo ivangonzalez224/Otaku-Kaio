@@ -3,8 +3,8 @@ const CartItem = ({ item, onRemoveItem, onQuantityChange }) => {
   const { quantity } = item;
 
   return (
-    <div className="bg-gray-100 rounded-md shadow-sm p-4 flex items-center">
-      <img className="w-20 h-20 object-cover mr-4" src={image} alt={name} />
+    <div className="bg-gray-100 rounded-md shadow-sm p-4 mb-4 flex items-center">
+      <img className="w-20 h-20 object-cover mr-4 rounded-md" src={image} alt={name} />
       <div className="flex flex-col">
         <div className="text-black font-medium">{name}</div>
         <div className="flex items-center text-gray-600 text-sm mt-2">

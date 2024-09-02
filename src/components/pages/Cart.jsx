@@ -104,22 +104,24 @@ const Cart = () => {
     const total = subtotal + shipping + tax - discount;
 
     return (
-      <div className="main_cart flex flex-col items-center justify-center w-100vw bg-gray mx-auto py-2 box-border">
+      <div className="main_cart flex flex-col items-center justify-center w-full bg-gray mx-auto py-2 box-border">
         {loading ? (
           <div>Loading...</div>
         ) : error ? (
           <div className="text-red-500">{error}</div>
         ) : (
-          <CartLogic
-            cartItems={products}
-            onRemoveItem={handleRemoveItem}
-            onQuantityChange={handleQuantityChange}
-            subtotal={subtotal}
-            discount={discount}
-            shipping={shipping}
-            tax={tax}
-            total={total}
-          />
+          <div className="w-[80%] max-w-[768px] bg-white rounded-md shadow-md p-4">
+            <CartLogic
+              cartItems={products}
+              onRemoveItem={handleRemoveItem}
+              onQuantityChange={handleQuantityChange}
+              subtotal={subtotal}
+              discount={discount}
+              shipping={shipping}
+              tax={tax}
+              total={total}
+            />
+          </div>
         )}
         <FooterLogic />
       </div>
