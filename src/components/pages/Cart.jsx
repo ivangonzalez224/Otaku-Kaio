@@ -34,7 +34,7 @@ const Cart = () => {
 
 	const handleRemoveItem = async (item) => {
       try {
-        const response = await fetch(`http://127.0.0.1:3000/api/v1/cart/${item.id}`, {
+        const response = await fetch(`http://127.0.0.1:3000/api/v1/carts/${item.id}`, {
         method: 'DELETE',
       });
 
@@ -56,7 +56,7 @@ const Cart = () => {
       if (newQuantity < 1) return;
 
       try {
-      	const response = await fetch(`http://127.0.0.1:3000/api/v1/cart/${item.id}`, {
+      	const response = await fetch(`http://127.0.0.1:3000/api/v1/carts/${item.id}`, {
           method: 'PATCH', // Update the quantity
           headers: {
             'Content-Type': 'application/json',
