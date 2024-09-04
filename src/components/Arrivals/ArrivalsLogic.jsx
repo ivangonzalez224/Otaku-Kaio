@@ -15,7 +15,7 @@ const ArrivalLogic = () => {
   const arrivalOptions = landingItems.filter(cat => cat.category === 'arrival');
 
   return (
-    <div className="flex flex-col justify-center items-center w-85 ">
+    <div className="flex flex-col justify-center items-center w-full mt-8">
       <ArrivalList arrivalOptions={arrivalOptions} />
     </div>
   );

@@ -4,10 +4,10 @@ import { FiShoppingCart } from "react-icons/fi";
 const ArrivalItem = ({ description, image }) => {
     return (
       <div className="arrivalItemDiv bg-gray-200 m-2 p-4 flex flex-col rounded-md hover:shadow-md">
-        <img className="mx-auto" src={image} alt='product image'></img>
+        <img className="mx-auto max-w-full h-auto" src={image} alt='product'></img>
         <div className="arrivalItemBottom flex items-center justify-between mt-4">
-          <span className="text-base font-medium">{description}</span>
-          <button className="bg-blue-500 text-white rounded-full px-4 py-2 text-sm6"><FiShoppingCart /></button>
+          <span className="text-sm md:text-base font-medium">{description}</span>
+          <button className="bg-blue-500 text-white rounded-full px-3 py-1 md:px-4 md:py-2 text-sm"><FiShoppingCart /></button>
         </div>
       </div>
     );
