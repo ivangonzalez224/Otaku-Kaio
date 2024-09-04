@@ -15,7 +15,7 @@ const CategoryLogic = () => {
   
   const catOptions = landingItems.filter(cat => cat.category === 'cat');
   return (
-    <div className="category-mainContainer mt-16 mx-auto">
+    <div className="category-mainContainer w-[85%] max-w-[768px] mt-16 mx-auto">
       <CategoryList catOptions={catOptions} />
     </div>
   );

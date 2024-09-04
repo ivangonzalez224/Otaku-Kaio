@@ -3,9 +3,9 @@ import CategoryItem from './CategoryItem';
 
 const CategoryList = ({ catOptions }) => {
   return (
-    <div>
-      <h2 className="text-lg text-left font-bold text-111 mb-4">Popular Categories</h2>
-      <div className="category_listContainer bg-f1f1f1 w-85 flex justify-center py-4"> 
+    <div className="w-full max-w-[768px] mx-auto px-4">
+      <h2 className="text-lg text-left font-bold text-gray-800 mb-4">Popular Categories</h2>
+      <div className="category_listContainer bg-gray-100 flex flex-wrap justify-center gap-4 py-4"> 
         {catOptions.map(category => (
           <CategoryItem
             key={category.id}
