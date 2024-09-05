@@ -17,12 +17,12 @@ const StoreList = ({ products, initialCategory }) => {
   const filteredProducts = products.filter((product) => product.category === selectedCategory);
 
   return (
-    <div>
-      <div className="flex justify-start mb-6">
+    <div className="w-full md:w-9/10 mx-auto">
+      <div className="flex flex-wrap justify-start mb-6 gap-4">
         {['Clothes', 'Mangas', 'Mugs', 'Games', 'Dolls'].map((category) => (
           <button
             key={category}
-            className={`bg-white-500 text-[15px] text-blue border border-blue-500 py-1 px-3 rounded-md focus:outline-none mr-4 ${
+            className={`bg-white-500 text-[15px] text-blue border border-blue-500 py-1 px-3 rounded-md focus:outline-none ${
               selectedCategory === category ? 'bg-blue-500 text-white' : ''
             }`}
             onClick={() => handleCategoryClick(category)}
@@ -31,7 +31,7 @@ const StoreList = ({ products, initialCategory }) => {
           </button>
         ))}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredProducts.map((product) => (
           <StoreItem
             key={product.id}

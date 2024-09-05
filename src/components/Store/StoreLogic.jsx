@@ -18,9 +18,10 @@ const StoreLogic = () => {
     if (productItems.length === 0) {
       dispatch(getProducts());  
     }
-  });
+  }, [dispatch, productItems.length]);
+
   return (
-    <div className="store_logic flex flex-col justify-center items-center mt-8 w-full md:w-[73%]">
+    <div className="store_logic flex flex-col justify-center items-center mt-8 w-[85%] md:w-9/10 mx-auto">
       <StoreList products={productItems} initialCategory={category} />
     </div>
   );
