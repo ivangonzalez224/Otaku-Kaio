@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa";
-import { HiOutlineMenu, HiX } from "react-icons/hi";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const NavBar = () => {
   const location = useLocation();
@@ -13,6 +13,25 @@ const NavBar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Close the menu when clicking outside of it
+  const handleClickOutside = (event) => {
+    if (!event.target.closest('.mobile-menu') && !event.target.closest('.hamburger-button')) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.addEventListener('click', handleClickOutside);
+    } else {
+      document.removeEventListener('click', handleClickOutside);
+    }
+    
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [isMenuOpen]);
+
   return (
     <nav className="w-full px-4 flex items-center justify-between h-16 bg-white font-bold text-gray-700 sticky top-0 z-10 box-border">
       {/* Logo */}
@@ -22,7 +41,7 @@ const NavBar = () => {
         </NavLink>
       </div>
 
-      {/* Menú de navegación para pantallas grandes */}
+      {/* Desktop menú */}
       <ul className="hidden md:flex w-99 items-center justify-around bg-gray-200 px-2 py-1 rounded-lg">
         <li className={`rounded-lg px-4 py-2 hover:bg-gray-300 cursor-pointer ${activeLink === "/" ? 'bg-white' : ''}`} >
           <NavLink to="/">Home</NavLink>
@@ -38,7 +57,7 @@ const NavBar = () => {
         </li>
       </ul>
 
-      {/* Íconos del carrito y perfil */}
+      {/*  cart and profile */}
       <ul className="hidden md:flex items-center justify-end">
         <li className="mr-4 flex items-center justify-center rounded-full border border-gray-700 px-4 py-3">
           <NavLink to="/cart">
@@ -52,39 +71,40 @@ const NavBar = () => {
         </li>
       </ul>
 
-      {/* Ícono de hamburguesa para pantallas móviles */}
-      <div className="md:hidden flex items-center">
-        <button onClick={toggleMenu} className="text-2xl focus:outline-none">
-          {isMenuOpen ? <HiX /> : <HiOutlineMenu />} {/* Alterna entre el icono de menú y de cerrar */}
+      <div className="md:hidden relative z-30">
+        <button onClick={toggleMenu} className="text-2xl hamburger-button focus:outline-none">
+          <GiHamburgerMenu />
         </button>
       </div>
 
-      {/* Menú desplegable para pantallas móviles */}
+      {/* Mobile menú  */}
       {isMenuOpen && (
-        <ul className="absolute top-16 left-0 w-full bg-white flex flex-col items-center py-4 shadow-md md:hidden z-10">
-          <li className={`py-2 hover:bg-gray-200 cursor-pointer ${activeLink === "/" ? 'bg-gray-100' : ''}`} >
-            <NavLink to="/" onClick={toggleMenu}>Home</NavLink>
-          </li>
-          <li className={`py-2 hover:bg-gray-200 cursor-pointer ${activeLink === "/about" ? 'bg-gray-100' : ''}`} >
-            <NavLink to="/about" onClick={toggleMenu}>About</NavLink>
-          </li>
-          <li className={`py-2 hover:bg-gray-200 cursor-pointer ${activeLink === "/store" ? 'bg-gray-100' : ''}`} >
-            <NavLink to="/store" onClick={toggleMenu}>Store</NavLink>
-          </li>
-          <li className={`py-2 hover:bg-gray-200 cursor-pointer ${activeLink === "/offers" ? 'bg-gray-100' : ''}`} >
-            <NavLink to="/offers" onClick={toggleMenu}>Offers</NavLink>
-          </li>
-          <li className="py-2 hover:bg-gray-200 cursor-pointer flex items-center justify-center rounded-full border border-gray-700 px-4 py-3">
-            <NavLink to="/cart" onClick={toggleMenu}>
-              <IoCartOutline />
-            </NavLink>
-          </li>
-          <li className="py-2 hover:bg-gray-200 cursor-pointer flex items-center justify-center rounded-full bg-yellow-400 px-4 py-3">
-            <NavLink to="/profile" onClick={toggleMenu}>
-              <FaRegUser />
-            </NavLink>
-          </li>
-        </ul>
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-20 flex items-center justify-center">
+          <ul className="bg-white w-[90%] max-w-sm mx-auto py-4 rounded-lg shadow-md flex flex-col items-start px-6 space-y-2">
+            <li className={`w-full pl-4 py-2 hover:bg-gray-200 cursor-pointer text-left ${activeLink === "/" ? 'bg-gray-100' : ''}`} >
+              <NavLink to="/" onClick={toggleMenu}>Home</NavLink>
+            </li>
+            <li className={`w-full pl-4 py-2 hover:bg-gray-200 cursor-pointer text-left ${activeLink === "/about" ? 'bg-gray-100' : ''}`} >
+              <NavLink to="/about" onClick={toggleMenu}>About</NavLink>
+            </li>
+            <li className={`w-full pl-4 py-2 hover:bg-gray-200 cursor-pointer text-left ${activeLink === "/store" ? 'bg-gray-100' : ''}`} >
+              <NavLink to="/store" onClick={toggleMenu}>Store</NavLink>
+            </li>
+            <li className={`w-full pl-4 py-2 hover:bg-gray-200 cursor-pointer text-left ${activeLink === "/offers" ? 'bg-gray-100' : ''}`} >
+              <NavLink to="/offers" onClick={toggleMenu}>Offers</NavLink>
+            </li>
+            <li className="w-full py-2 hover:bg-gray-200 cursor-pointer flex items-center justify-start rounded-full border border-gray-700 px-4 py-3">
+              <NavLink to="/cart" onClick={toggleMenu}>
+                <IoCartOutline />
+              </NavLink>
+            </li>
+            <li className="w-full py-2 hover:bg-gray-200 cursor-pointer flex items-center justify-start rounded-full bg-yellow-400 px-4 py-3">
+              <NavLink to="/profile" onClick={toggleMenu}>
+                <FaRegUser />
+              </NavLink>
+            </li>
+          </ul>
+        </div>  
       )}
     </nav>
   );
