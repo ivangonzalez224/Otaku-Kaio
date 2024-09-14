@@ -9,6 +9,7 @@ const ArrivalList = ({ arrivalOptions }) => (
           <ArrivalItem
             key={arrival.id}
             description={arrival.name}
+            category={arrival.sub}
             image={arrival.image}
             className="arrivalItem"
           />
