@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import defaultProfileImage from '../../assets/images/otaku-profile-photo.png';
+import FooterLogic from '../Footer/FooterLogic';
 
 const UserProfile = () => {
   const user = useSelector((state) => state.user.userInfo.data);
@@ -10,8 +11,8 @@ const UserProfile = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen pb-12">
-      <h1 className="text-2xl font-bold mb-8">User Profile</h1>
+    <div className="flex flex-col items-center justify-center h-screen pb-12 pt-20">
+      <h1 className="text-2xl font-bold mb-8 mt-20">User Profile</h1>
       <div className="bg-white p-6 rounded-lg shadow-lg text-center">
         <img
             src={defaultProfileImage}
@@ -22,7 +23,8 @@ const UserProfile = () => {
           <p className="mb-2"><strong>Name:</strong> {user.name}</p>
           <p><strong>Email:</strong> {user.email}</p>
         </div>  
-      </div>  
+      </div>
+      <FooterLogic />
     </div>
   );
 };

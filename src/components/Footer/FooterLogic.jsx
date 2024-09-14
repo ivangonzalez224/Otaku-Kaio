@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 const FooterLogic = () => {
     return (
       <footer className="w-full bg-white border-t border-gray-200 py-8 mt-12">
@@ -52,7 +54,7 @@ const FooterLogic = () => {
             <h3 className="mb-4 text-sm font-bold text-gray-700 text-center md:text-left">Customer Services</h3>
             <ul className="text-center md:text-left">
               <li className="mb-2">
-                <a href="/account" className="text-gray-600 hover:text-blue-500">Account</a>
+                <NavLink to="/profile" className="text-gray-600 hover:text-blue-500">Profile</NavLink>
               </li>
               <li className="mb-2">
                 <a href="/cart" className="text-gray-600 hover:text-blue-500">Cart</a>
