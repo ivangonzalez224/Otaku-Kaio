@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import CartLogic from '../Cart/CartLogic';
 import FooterLogic from '../Footer/FooterLogic';
 
@@ -8,6 +9,8 @@ const Cart = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
+  
   // Fetch items from the cart
   useEffect(() => {
     const fetchCartItems = async () => {
@@ -109,7 +112,17 @@ const Cart = () => {
           <div>Loading...</div>
         ) : error ? (
           <div className="text-red-500">{error}</div>
-        ) : (
+        ) : products.length === 0 ? (
+          <div className="text-center">
+            <p className="text-gray-600 text-lg mb-4">Your cart is currently empty.</p>
+            <button
+              className="bg-yellow-500 hover:bg-yellow-700 text-white py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
+              onClick={() => navigate('/store')}
+            >
+              Go to Store
+            </button>
+        </div>
+      ) : (
           <div className="w-[80%] max-w-[768px] bg-white rounded-md shadow-md p-4">
             <CartLogic
               cartItems={products}
