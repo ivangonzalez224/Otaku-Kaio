@@ -1,6 +1,17 @@
+import { useState } from 'react';
 import CartItem from './CartItem';
+import { FaRegCreditCard } from "react-icons/fa6";
 
 const CartLogic = ({ cartItems, onRemoveItem, onQuantityChange, subtotal, discount, shipping, tax, total }) => {
+  const [cardholderName, setCardholderName] = useState('');
+  const [cardNumber, setCardNumber] = useState('');
+  const [expiry, setExpiry] = useState('');
+  const [cvc, setCvc] = useState('');
+
+  const handlePayment = () => {
+    console.log('Procesando pago...');
+  };
+
   return (
     <div className="bg-white rounded-md shadow-md p-4 flex flex-col">
       <div className="flex justify-between items-center mb-4">
@@ -40,9 +51,78 @@ const CartLogic = ({ cartItems, onRemoveItem, onQuantityChange, subtotal, discou
             <span>Total:</span>
             <span>${total.toFixed(2)}</span>
           </div>
-          <button className="w-full bg-yellow-500 mt-8 hover:bg-yellow-700 text-white py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
+
+          <div className="border border-gray-300 bg-white rounded-md p-4 mt-4">
+            {/* Credit Card Heading */}
+            <div className="flex items-center border border-blue-500 text-blue-500 font-medium text-left p-2 mb-4 rounded-md">
+              <FaRegCreditCard className="mr-4"/>
+              Credit card
+            </div>
+
+            {/* Credit card form */}
+            <div>
+              <div className="mb-4">
+                <label htmlFor="cardholderName" className="block text-left text-sm font-medium text-gray-700">
+                  Cardholder's Name
+                </label>
+                <input
+                  type="text"
+                  id="cardholderName"
+                  className="mt-1 block w-full p-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                  value={cardholderName}
+                  onChange={(e) => setCardholderName(e.target.value)}
+                />
+              </div>
+
+              <div className="mb-4">
+                <label htmlFor="cardNumber" className="block text-left text-sm font-medium text-gray-700">
+                  Card Number
+                </label>
+                <input
+                  type="text"
+                  id="cardNumber"
+                  className="mt-1 block w-full p-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                  value={cardNumber}
+                  onChange={(e) => setCardNumber(e.target.value)}
+                />
+              </div>
+
+              <div className="mb-4">
+                <label htmlFor="expiry" className="block text-left text-sm font-medium text-gray-700">
+                  Expiry Date
+                </label>
+                <input
+                  type="text"
+                  id="expiry"
+                  className="mt-1 block w-full p-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                  value={expiry}
+                  onChange={(e) => setExpiry(e.target.value)}
+                  placeholder="MM/YY"
+                />
+              </div>
+
+              <div className="mb-4">
+                <label htmlFor="cvc" className="block text-left text-sm font-medium text-gray-700">
+                  CVC
+                </label>
+                <input
+                  type="text"
+                  id="cvc"
+                  className="mt-1 block w-full p-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                  value={cvc}
+                  onChange={(e) => setCvc(e.target.value)}
+                />
+              </div>
+            </div>
+            <button
+            className="w-full bg-yellow-500 mt-8 hover:bg-yellow-700 text-white py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
+            onClick={handlePayment}
+          >
             Pay Now
           </button>
+          </div>
+
+          
         </div>
       </div>
     </div>
