@@ -1,3 +1,4 @@
+import React from 'react';
 import CarouselLogic from '../Carousel/CarouselLogic';
 import CategoryLogic from '../Categories/CategoryLogic';
 import OfferLogic from '../Offer/OfferLogic';

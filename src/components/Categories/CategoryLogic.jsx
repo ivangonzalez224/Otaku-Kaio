@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getLandings } from '../../redux/landings/LandingsSlice';
 import CategoryList from './CategoryList';
