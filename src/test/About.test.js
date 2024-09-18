@@ -41,4 +41,18 @@ describe('About Page', () => {
     expect(screen.getByText('Games')).toBeInTheDocument();
     expect(screen.getByAltText('Games')).toBeInTheDocument();
   });
+
+  it('renders the Community section with social media links', () => {
+    expect(screen.getByText('Join Our Community')).toBeInTheDocument();
+    const facebookLink = screen.getByRole('link', { name: /facebook/i, hidden: true });
+	expect(facebookLink).toHaveAttribute('href', 'https://facebook.com');
+    expect(screen.getByRole('link', { name: /twitter/i })).toHaveAttribute('href', 'https://twitter.com');
+    expect(screen.getByRole('link', { name: /instagram/i })).toHaveAttribute('href', 'https://instagram.com');
+  });
+
+  it('renders the Contact Us section with contact details', () => {
+    expect(screen.getByText('Get in Touch')).toBeInTheDocument();
+    expect(screen.getByText(/support@otakukaio.com/i)).toHaveAttribute('href', 'mailto:support@otakukaio.com');
+    expect(screen.getByText('+1 (234) 567-890')).toHaveAttribute('href', 'tel:+51906590278');
+  });
 });  
