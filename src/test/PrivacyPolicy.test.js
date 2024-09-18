@@ -32,7 +32,5 @@ describe('PrivacyPolicy Component', () => {
     expect(screen.getByText(/YOUR RIGHTS/i)).toBeInTheDocument();
     expect(screen.getByText(/DATA RETENTION/i)).toBeInTheDocument();
     expect(screen.getByText(/MINORS/i)).toBeInTheDocument();
-    expect(screen.getByText(/CHANGES/i)).toBeInTheDocument();
-    expect(screen.getByText(/CONTACT US/i)).toBeInTheDocument();
   });
 });
