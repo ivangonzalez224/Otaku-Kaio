@@ -55,4 +55,12 @@ describe('About Page', () => {
     expect(screen.getByText(/support@otakukaio.com/i)).toHaveAttribute('href', 'mailto:support@otakukaio.com');
     expect(screen.getByText('+1 (234) 567-890')).toHaveAttribute('href', 'tel:+51906590278');
   });
+
+  it('renders the Customer Testimonials section with customer reviews', () => {
+    expect(screen.getByText('What Our Customers Say')).toBeInTheDocument();
+    expect(screen.getByText(/I love the variety of products/i)).toBeInTheDocument();
+    expect(screen.getByText('- Alex, Tokyo')).toBeInTheDocument();
+    expect(screen.getByText(/Otaku Kaio is my go-to store/i)).toBeInTheDocument();
+    expect(screen.getByText('- Maria, New York')).toBeInTheDocument();
+  });
 });  
