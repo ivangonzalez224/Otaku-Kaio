@@ -1,3 +1,4 @@
+import React from 'react';
 import FooterLogic from '../Footer/FooterLogic';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
