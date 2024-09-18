@@ -10,4 +10,10 @@ describe('PrivacyPolicy Component', () => {
     const titleElement = screen.getByText(/Privacy Policy/i);
     expect(titleElement).toBeInTheDocument();
   });
+
+  test('renders the main title correctly', () => {
+    render(<PrivacyPolicy />);
+    const titleElement = screen.getByRole('heading', { level: 1 });
+    expect(titleElement).toHaveTextContent('Privacy Policy');
+  });
 });
