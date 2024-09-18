@@ -15,4 +15,10 @@ describe('About Page', () => {
     expect(screen.getByText('Otaku Kaio')).toBeInTheDocument();
     expect(screen.getByText('Your One-Stop Shop for All Things Otaku!')).toBeInTheDocument();
   });
+
+  it('renders the Introduction section with the heading and images', () => {
+    expect(screen.getByText('Welcome to Otaku Kaio')).toBeInTheDocument();
+    expect(screen.getByAltText('Otaku Culture')).toBeInTheDocument();
+    expect(screen.getByAltText('Another Aspect of Otaku Culture')).toBeInTheDocument();
+  });
 });  
