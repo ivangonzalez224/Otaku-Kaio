@@ -63,4 +63,8 @@ describe('About Page', () => {
     expect(screen.getByText(/Otaku Kaio is my go-to store/i)).toBeInTheDocument();
     expect(screen.getByText('- Maria, New York')).toBeInTheDocument();
   });
+
+  it('renders the Footer component', () => {
+    expect(screen.getByText('Footer')).toBeInTheDocument();
+  });
 });  
