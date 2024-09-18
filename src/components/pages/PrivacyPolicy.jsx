@@ -5,9 +5,9 @@ const PrivacyPolicy = () => {
   return (
     <div className="container mx-auto p-6">
       <h1 className="text-4xl font-bold mt-6 mb-4 text-center">Privacy Policy</h1>
-      <img src="https://res.cloudinary.com/dv1mouzbi/image/upload/v1717606385/devSources/privacyPolicyTop_sc5vvf.png" alt="Privacy Policy" className="mx-auto mt-6 mb-8 w-1/2" />
+      <img src="https://res.cloudinary.com/dv1mouzbi/image/upload/v1717606385/devSources/privacyPolicyTop_sc5vvf.png" alt="Privacy P." className="mx-auto mt-6 mb-8 w-1/2" />
       <p className="mb-4 text-left">
-        Welcome to Otaku Kaio! This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from otakukaion.com (the “Site”).
+        Welcome to Otaku Kaio! This Document describes how your personal information is collected, used, and shared when you visit or make a purchase from otakukaion.com (the “Site”).
       </p>
       
       <h2 className="text-2xl font-semibold mt-6 mb-2 text-left">PERSONAL INFORMATION WE COLLECT</h2>
@@ -53,7 +53,7 @@ const PrivacyPolicy = () => {
 
       <h2 className="text-2xl font-semibold mt-6 mb-2 text-left">CHANGES</h2>
       <p className="mb-4 text-left">
-        We may update this privacy policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal, or regulatory reasons.
+        We may update this document from time to time in order to reflect, for example, changes to our practices or for other operational, legal, or regulatory reasons.
       </p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-2 text-left">CONTACT US</h2>
