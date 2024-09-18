@@ -27,4 +27,18 @@ describe('About Page', () => {
     expect(screen.getByText(/Otaku Kaio was founded in 2023/i)).toBeInTheDocument();
     expect(screen.getByAltText('Our Story')).toBeInTheDocument();
   });
+
+  it('renders the Our Products section with the product categories', () => {
+    expect(screen.getByText('What We Offer')).toBeInTheDocument();
+    expect(screen.getByText('Clothes')).toBeInTheDocument();
+    expect(screen.getByAltText('Clothes')).toBeInTheDocument();
+    expect(screen.getByText('Mugs')).toBeInTheDocument();
+    expect(screen.getByAltText('Mugs')).toBeInTheDocument();
+    expect(screen.getByText('Mangas')).toBeInTheDocument();
+    expect(screen.getByAltText('Mangas')).toBeInTheDocument();
+    expect(screen.getByText('Dolls')).toBeInTheDocument();
+    expect(screen.getByAltText('Dolls')).toBeInTheDocument();
+    expect(screen.getByText('Games')).toBeInTheDocument();
+    expect(screen.getByAltText('Games')).toBeInTheDocument();
+  });
 });  
