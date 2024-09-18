@@ -30,7 +30,7 @@ const About = () =>  (
         <p className="text-lg mb-6">Our journey has been fueled by our love for anime and manga, and we strive to share that passion with every product we offer.</p>
         <div className="flex flex-col md:flex-row justify-center md:space-x-4 space-y-4 md:space-y-0">
 		  <img src="https://res.cloudinary.com/dv1mouzbi/image/upload/v1716899010/devSources/storySecAbou1_bk2tov.png" alt="Our Story" className="w-full md:w-1/2 h-64 object-cover rounded-lg shadow-lg" />
-		  <img src="https://res.cloudinary.com/dv1mouzbi/image/upload/v1716899018/devSources/storySecAbou2_aaa8xu.png" alt="Our Story" className="w-full md:w-1/2 h-64 object-cover rounded-lg shadow-lg" />
+		  <img src="https://res.cloudinary.com/dv1mouzbi/image/upload/v1716899018/devSources/storySecAbou2_aaa8xu.png" alt="Our Story 2" className="w-full md:w-1/2 h-64 object-cover rounded-lg shadow-lg" />
 	    </div>
       </section>
 

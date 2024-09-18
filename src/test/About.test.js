@@ -21,4 +21,10 @@ describe('About Page', () => {
     expect(screen.getByAltText('Otaku Culture')).toBeInTheDocument();
     expect(screen.getByAltText('Another Aspect of Otaku Culture')).toBeInTheDocument();
   });
+
+  it('renders the Our Story section with the heading and text', () => {
+    expect(screen.getByText('Our Story')).toBeInTheDocument();
+    expect(screen.getByText(/Otaku Kaio was founded in 2023/i)).toBeInTheDocument();
+    expect(screen.getByAltText('Our Story')).toBeInTheDocument();
+  });
 });  
