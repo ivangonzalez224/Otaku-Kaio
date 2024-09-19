@@ -47,4 +47,24 @@ describe('UserProfile Component', () => {
     // Verify the footer renders correctly
     expect(screen.getByText('Mocked Footer')).toBeInTheDocument();
   });
+
+  test('renders loading message when user data is not available', () => {
+    // Create a state without user information
+    store = mockStore({
+      user: {
+        userInfo: {
+          data: null,
+        },
+      },
+    });
+
+    render(
+      <Provider store={store}>
+        <UserProfile />
+      </Provider>
+    );
+
+    // Verify if the message "Loading..." shows when there is no user
+    expect(screen.getByText('Loading...')).toBeInTheDocument();
+  });
 });
