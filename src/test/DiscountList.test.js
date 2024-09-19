@@ -13,13 +13,27 @@ const mockDiscountItems = [
 
 jest.mock('../components/Discounts/DiscountItem', () => ({ name }) => <div>{name}</div>);
 
+// Mock the react-router-dom including useNavigate
+jest.mock('react-router-dom', () => {
+  const actual = jest.requireActual('react-router-dom');
+  return {
+    ...actual,
+    useNavigate: jest.fn(),  // Make the mock useNavigate 
+  };
+});
+
 describe('DiscountList Component', () => {
   let store;
+  let navigateMock;
 
   beforeEach(() => {
     store = mockStore({
       discounts: { discountItems: mockDiscountItems },
     });
+
+    // Reset the mock before every test
+    navigateMock = require('react-router-dom').useNavigate;
+    navigateMock.mockClear();
   });
 
   test('renders DiscountList with categories and discounts', () => {

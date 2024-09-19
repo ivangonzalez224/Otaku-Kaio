@@ -73,13 +73,13 @@ const About = () =>  (
         <h2 className="text-3xl font-bold mb-4">Join Our Community</h2>
         <p className="text-lg mb-6">Follow us on social media and become a part of our vibrant otaku community. Stay updated with the latest product releases, events, and more.</p>
         <div className="flex justify-center space-x-4">
-          <a href="https://facebook.com" target="_blank" aria-label="facebook">
+          <a href="https://facebook.com" target="_blank" aria-label="facebook" rel="noreferrer">
             <FaFacebook size={32} />
           </a>
-          <a href="https://twitter.com" target="_blank" aria-label="twitter">
+          <a href="https://twitter.com" target="_blank" aria-label="twitter" rel="noreferrer">
             <FaTwitter size={32} />
           </a>
-          <a href="https://instagram.com" target="_blank" aria-label="instagram">
+          <a href="https://instagram.com" target="_blank" aria-label="instagram" rel="noreferrer">
             <FaInstagram size={32} />
           </a>
         </div>
