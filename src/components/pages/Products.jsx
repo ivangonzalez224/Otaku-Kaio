@@ -1,3 +1,4 @@
+import React from 'react';
 import StoreLogic from '../Store/StoreLogic';
 import FooterLogic from '../Footer/FooterLogic';
 
