@@ -1,3 +1,4 @@
+import React from 'react';
 import FooterLogic from '../Footer/FooterLogic';
 import DiscountList from '../Discounts/DiscountList';
 
