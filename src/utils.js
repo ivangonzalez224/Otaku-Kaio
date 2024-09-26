@@ -3,7 +3,7 @@ import { setUser } from './redux/user/UserSlice';
 
 export const loginUser = async (email, password) => {
   try {
-    const response = await fetch('http://127.0.0.1:3000/auth/login', {
+    const response = await fetch('https://otakuside.onrender.com/auth/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

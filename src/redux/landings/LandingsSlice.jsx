@@ -6,7 +6,7 @@ export const getLandings = createAsyncThunk(
   async (arg, { rejectWithValue }) => {
     try {
       const response = await axios.get(
-        'http://127.0.0.1:3000/api/v1/landings',
+        'https://otakuside.onrender.com/api/v1/landings',
       );
       const endData = response.data;
       return endData;

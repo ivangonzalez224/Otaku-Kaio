@@ -34,7 +34,7 @@ const DetailsItem = ({ product }) => {
 
     try {
       // POST to backend to add the product to the cart
-      const response = await fetch('http://127.0.0.1:3000/api/v1/carts', {
+      const response = await fetch('https://otakuside.onrender.com/api/v1/carts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

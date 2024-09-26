@@ -19,7 +19,7 @@ const Cart = () => {
         setLoading(true);
         setError(null);
         const userId = user.data.id;
-        const response = await fetch(`http://127.0.0.1:3000/api/v1/carts?user_id=${userId}`);
+        const response = await fetch(`https://otakuside.onrender.com/api/v1/carts?user_id=${userId}`);
         if (!response.ok) {
           throw new Error('Failed to fetch cart items');
         }
@@ -37,7 +37,7 @@ const Cart = () => {
 
 	const handleRemoveItem = async (item) => {
       try {
-        const response = await fetch(`http://127.0.0.1:3000/api/v1/carts/${item.id}`, {
+        const response = await fetch(`https://otakuside.onrender.com/api/v1/carts/${item.id}`, {
         method: 'DELETE',
       });
 
@@ -59,7 +59,7 @@ const Cart = () => {
       if (newQuantity < 1) return;
 
       try {
-      	const response = await fetch(`http://127.0.0.1:3000/api/v1/carts/${item.id}`, {
+      	const response = await fetch(`https://otakuside.onrender.com/api/v1/carts/${item.id}`, {
           method: 'PATCH', // Update the quantity
           headers: {
             'Content-Type': 'application/json',
