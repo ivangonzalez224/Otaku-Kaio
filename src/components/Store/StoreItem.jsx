@@ -27,12 +27,6 @@ const StoreItem = ({ productid, image, name, originalPrice, salePrice }) => {
         >
           Details
         </button>
-        <button
-          className="bg-yellow-500 hover:bg-yellow-700 focus:outline-none text-white font-bold py-2 px-4 rounded-md ml-4"
-          // onClick={onCartClick}
-        >
-          <TbShoppingCartFilled />
-        </button>
       </div>
     </div>
   );
