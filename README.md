@@ -39,7 +39,7 @@
 
 The link to the Rails app:
 
-- [Rails app link](https://otakuside.onrender.com)
+- [Rails app link](https://github.com/ivangonzalez224/Otaku-kaio-Back-end.git)
 
 <!--Live Demo -->
 
