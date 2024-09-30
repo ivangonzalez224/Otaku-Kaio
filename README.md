@@ -39,16 +39,16 @@
 
 The link to the Rails app:
 
-- [Rails app link]( )
+- [Rails app link](https://otakuside.onrender.com)
 
-<!--Kanban board -->
+<!--Live Demo -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
  The link to the project deployed:
 
-- [Live Demo api link]( )
-- [Live Demo front end app link]( )
+- [Live Demo api link](https://otakuside.onrender.com)
+- [Live Demo front end app link](https://otakukaio.netlify.app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -126,7 +126,6 @@ To run the project, do the following:
 👤 **Iván Gonzalez**
 
 - GitHub: [@ivangonzalez224](https://github.com/ivangonzalez224)
-- Twitter: [@Ivan Gonzalez](https://twitter.com/ivang2204)
 - LinkedIn: [Iván Gonzalez Robles](https://www.linkedin.com/in/iván-gonzalez-robles-957491275/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
