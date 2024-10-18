@@ -34,7 +34,7 @@ const App = () => {
   }, []);
   
   return (
-    <div className="main-container">
+    <div className="main-container mx-auto max-w-screen-2xl px-4">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
