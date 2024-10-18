@@ -11,7 +11,7 @@ const UserProfile = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen pb-12 pt-20">
+    <div className="flex flex-col items-center justify-center min-h-screen pb-12 pt-2 sm:pt-20 mt-4 sm:mt-6">
       <h1 className="text-2xl font-bold mb-8 mt-20">User Profile</h1>
       <div className="bg-white p-6 rounded-lg shadow-lg text-center">
         <img
